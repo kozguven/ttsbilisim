@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - TTS Bilişim</title>
+    <meta name="description" content="TTS Bilişim blog sayfasında teknoloji, akıllı cihazlar, teknik servis ipuçları ve güncel teknoloji haberlerini bulabilirsiniz.">
+    <meta name="keywords" content="teknoloji, blog, akıllı cihazlar, telefon tamiri, bilgisayar bakımı, teknik servis, TTS Bilişim">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'roboto': ['Roboto', 'sans-serif']
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: '#1a56db',
+                            50: '#f0f5ff',
+                            100: '#e0eaff',
+                            200: '#c7d7fe',
+                            300: '#a0b9fa',
+                            400: '#7590f5',
+                            500: '#4f67ed',
+                            600: '#3a48df',
+                            700: '#303ac7',
+                            800: '#2c31a1',
+                            900: '#2c3180'
+                        },
+                        secondary: {
+                            DEFAULT: '#4b5563',
+                            50: '#f8fafc',
+                            100: '#f0f5f9',
+                            200: '#e1e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <a href="index.html" class="flex items-center">
+                        <img src="img/logo.png" alt="TTS Bilişim Logo" class="h-12 mr-2">
+                        
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Ana Sayfa</a>
+                    <a href="hakkimizda.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Hakkımızda</a>
+                    <a href="hizmetlerimiz.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Hizmetlerimiz</a>
+                    <a href="yedek-parca.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Orijinal Yedek Parça</a>
+                    <a href="blog.html" class="text-primary font-medium hover:text-primary-700 transition-colors">Blog</a>
+                    <a href="iletisim.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">İletişim</a>
+                </nav>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <nav id="mobile-menu" class="hidden bg-white px-4 py-3 md:hidden border-t border-gray-200">
+            <div class="flex flex-col space-y-3">
+                <a href="index.html" class="text-secondary-600 font-medium py-2">Ana Sayfa</a>
+                <a href="hakkimizda.html" class="text-secondary-600 font-medium py-2">Hakkımızda</a>
+                <a href="hizmetlerimiz.html" class="text-secondary-600 font-medium py-2">Hizmetlerimiz</a>
+                <a href="yedek-parca.html" class="text-secondary-600 font-medium py-2">Orijinal Yedek Parça</a>
+                <a href="blog.html" class="text-primary font-medium py-2">Blog</a>
+                <a href="iletisim.html" class="text-secondary-600 font-medium py-2">İletişim</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sayfa Başlığı -->
+        <section class="bg-primary-700 text-white py-16">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Blog</h1>
+                    <p class="text-lg text-white opacity-90">Teknoloji dünyasındaki gelişmeler, cihaz bakım ipuçları ve teknik servis bilgilerine dair güncel yazılarımız</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Blog Post Arama ve Filtreler -->
+        <section class="py-8 bg-white border-b">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap items-center justify-between">
+                    <div class="w-full md:w-auto mb-4 md:mb-0">
+                        <form class="flex">
+                            <input type="text" placeholder="Blog yazılarında ara..." class="p-3 border border-gray-300 rounded-l-md w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <button type="submit" class="bg-primary text-white px-4 rounded-r-md hover:bg-primary-700 transition-colors">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="w-full md:w-auto flex flex-wrap gap-2">
+                        <span class="text-secondary-600 self-center mr-2">Kategoriler:</span>
+                        <a href="#" class="bg-primary-50 text-primary px-3 py-1 rounded-full text-sm hover:bg-primary-100 transition-colors">Tümü</a>
+                        <a href="#" class="bg-gray-100 text-secondary-600 px-3 py-1 rounded-full text-sm hover:bg-primary-50 hover:text-primary transition-colors">Teknoloji</a>
+                        <a href="#" class="bg-gray-100 text-secondary-600 px-3 py-1 rounded-full text-sm hover:bg-primary-50 hover:text-primary transition-colors">Bakım & Onarım</a>
+                        <a href="#" class="bg-gray-100 text-secondary-600 px-3 py-1 rounded-full text-sm hover:bg-primary-50 hover:text-primary transition-colors">İpuçları</a>
+                        <a href="#" class="bg-gray-100 text-secondary-600 px-3 py-1 rounded-full text-sm hover:bg-primary-50 hover:text-primary transition-colors">Haberler</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Blog Yazıları -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Blog Post 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2 duration-300">
+                        <div class="h-48 overflow-hidden">
+                            <img src="img/blog/blog-1.jpg" alt="Akıllı Telefonunuzun Ömrünü Nasıl Uzatabilirsiniz?" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-primary-50 text-primary text-xs px-2 py-1 rounded-full">Bakım & Onarım</span>
+                                <span class="text-secondary-400 text-sm ml-auto">25 Mayıs 2025</span>
+                            </div>
+                            <h2 class="text-xl font-semibold text-primary mb-2">Akıllı Telefonunuzun Ömrünü Nasıl Uzatabilirsiniz?</h2>
+                            <p class="text-secondary-600 mb-4">Telefonunuzun ömrünü uzatacak bakım ipuçları, batarya sağlığını koruma ve en sık karşılaşılan sorunları önleme yöntemleri...</p>
+                            <a href="#" class="text-primary hover:underline font-medium inline-flex items-center">
+                                Devamını Oku <i class="fas fa-arrow-right ml-1 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog Post 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2 duration-300">
+                        <div class="h-48 overflow-hidden">
+                            <img src="img/blog/blog-2.jpg" alt="2025 Yılının En İyi Dizüstü Bilgisayarları" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-primary-50 text-primary text-xs px-2 py-1 rounded-full">Teknoloji</span>
+                                <span class="text-secondary-400 text-sm ml-auto">18 Mayıs 2025</span>
+                            </div>
+                            <h2 class="text-xl font-semibold text-primary mb-2">2025 Yılının En İyi Dizüstü Bilgisayarları</h2>
+                            <p class="text-secondary-600 mb-4">Bu yılın en yeni laptop modellerini inceledik. Fiyat performans karşılaştırmaları ve hangi kullanıcı tipine hangi model daha uygun...</p>
+                            <a href="#" class="text-primary hover:underline font-medium inline-flex items-center">
+                                Devamını Oku <i class="fas fa-arrow-right ml-1 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog Post 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2 duration-300">
+                        <div class="h-48 bg-primary-100 flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-primary-700 text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-primary-50 text-primary text-xs px-2 py-1 rounded-full">İpuçları</span>
+                                <span class="text-secondary-400 text-sm ml-auto">12 Mayıs 2025</span>
+                            </div>
+                            <h2 class="text-xl font-semibold text-primary mb-2">Verilerinizi Nasıl Güvende Tutabilirsiniz?</h2>
+                            <p class="text-secondary-600 mb-4">Önemli verilerinizi kaybetmemek için düzenli yedekleme nasıl yapılır? Hangi depolama çözümleri güvenli ve etkili?</p>
+                            <a href="#" class="text-primary hover:underline font-medium inline-flex items-center">
+                                Devamını Oku <i class="fas fa-arrow-right ml-1 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog Post 4 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2 duration-300">
+                        <div class="h-48 bg-primary-100 flex items-center justify-center">
+                            <i class="fas fa-microchip text-primary-700 text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-primary-50 text-primary text-xs px-2 py-1 rounded-full">Teknoloji</span>
+                                <span class="text-secondary-400 text-sm ml-auto">5 Mayıs 2025</span>
+                            </div>
+                            <h2 class="text-xl font-semibold text-primary mb-2">SSD mi HDD mi? Doğru Depolama Seçimi</h2>
+                            <p class="text-secondary-600 mb-4">Bilgisayarınız için doğru depolama çözümünü seçerken bilmeniz gerekenler, performans karşılaştırmaları ve fiyat analizleri...</p>
+                            <a href="#" class="text-primary hover:underline font-medium inline-flex items-center">
+                                Devamını Oku <i class="fas fa-arrow-right ml-1 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog Post 5 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2 duration-300">
+                        <div class="h-48 bg-primary-100 flex items-center justify-center">
+                            <i class="fas fa-battery-full text-primary-700 text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-primary-50 text-primary text-xs px-2 py-1 rounded-full">Bakım & Onarım</span>
+                                <span class="text-secondary-400 text-sm ml-auto">28 Nisan 2025</span>
+                            </div>
+                            <h2 class="text-xl font-semibold text-primary mb-2">Telefonunuzun Batarya Ömrünü Uzatmanın 10 Yolu</h2>
+                            <p class="text-secondary-600 mb-4">Batarya ömrünü kısaltan alışkanlıklar ve bataryanızdan maksimum verim almak için yapmanız gerekenler...</p>
+                            <a href="#" class="text-primary hover:underline font-medium inline-flex items-center">
+                                Devamını Oku <i class="fas fa-arrow-right ml-1 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog Post 6 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2 duration-300">
+                        <div class="h-48 bg-primary-100 flex items-center justify-center">
+                            <i class="fas fa-tablet-alt text-primary-700 text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-primary-50 text-primary text-xs px-2 py-1 rounded-full">Haberler</span>
+                                <span class="text-secondary-400 text-sm ml-auto">20 Nisan 2025</span>
+                            </div>
+                            <h2 class="text-xl font-semibold text-primary mb-2">Yeni iPad Pro: Dizüstü Bilgisayarlara Rakip Mi?</h2>
+                            <p class="text-secondary-600 mb-4">Apple'ın son çıkardığı iPad Pro modelinin detaylı incelemesi ve bir laptop yerine kullanılıp kullanılamayacağı analizi...</p>
+                            <a href="#" class="text-primary hover:underline font-medium inline-flex items-center">
+                                Devamını Oku <i class="fas fa-arrow-right ml-1 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog Post 7 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2 duration-300">
+                        <div class="h-48 bg-primary-100 flex items-center justify-center">
+                            <i class="fas fa-virus-slash text-primary-700 text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-primary-50 text-primary text-xs px-2 py-1 rounded-full">İpuçları</span>
+                                <span class="text-secondary-400 text-sm ml-auto">15 Nisan 2025</span>
+                            </div>
+                            <h2 class="text-xl font-semibold text-primary mb-2">Bilgisayarınızı Virüslerden Nasıl Korursunuz?</h2>
+                            <p class="text-secondary-600 mb-4">En iyi antivirüs programları, güvenlik önlemleri ve kötü amaçlı yazılımlara karşı alınabilecek önlemler...</p>
+                            <a href="#" class="text-primary hover:underline font-medium inline-flex items-center">
+                                Devamını Oku <i class="fas fa-arrow-right ml-1 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog Post 8 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2 duration-300">
+                        <div class="h-48 bg-primary-100 flex items-center justify-center">
+                            <i class="fas fa-tachometer-alt text-primary-700 text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-primary-50 text-primary text-xs px-2 py-1 rounded-full">İpuçları</span>
+                                <span class="text-secondary-400 text-sm ml-auto">8 Nisan 2025</span>
+                            </div>
+                            <h2 class="text-xl font-semibold text-primary mb-2">Bilgisayarınızı Nasıl Hızlandırabilirsiniz?</h2>
+                            <p class="text-secondary-600 mb-4">Yavaş çalışan bilgisayarınızın performansını artırmak için pratik ipuçları ve donanım yükseltme tavsiyeleri...</p>
+                            <a href="#" class="text-primary hover:underline font-medium inline-flex items-center">
+                                Devamını Oku <i class="fas fa-arrow-right ml-1 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog Post 9 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2 duration-300">
+                        <div class="h-48 bg-primary-100 flex items-center justify-center">
+                            <i class="fas fa-camera text-primary-700 text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-3">
+                                <span class="bg-primary-50 text-primary text-xs px-2 py-1 rounded-full">Haberler</span>
+                                <span class="text-secondary-400 text-sm ml-auto">1 Nisan 2025</span>
+                            </div>
+                            <h2 class="text-xl font-semibold text-primary mb-2">2025'in En İyi Kameralı Telefonları</h2>
+                            <p class="text-secondary-600 mb-4">Bu yılın en etkileyici kamera performansına sahip akıllı telefonları ve detaylı karşılaştırma testleri...</p>
+                            <a href="#" class="text-primary hover:underline font-medium inline-flex items-center">
+                                Devamını Oku <i class="fas fa-arrow-right ml-1 text-sm"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sayfalama -->
+                <div class="flex justify-center mt-12">
+                    <nav>
+                        <ul class="flex space-x-2">
+                            <li>
+                                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-md bg-white text-secondary-600 border border-gray-300 hover:bg-primary-50 hover:text-primary transition-colors">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-md bg-primary text-white">1</a>
+                            </li>
+                            <li>
+                                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-md bg-white text-secondary-600 border border-gray-300 hover:bg-primary-50 hover:text-primary transition-colors">2</a>
+                            </li>
+                            <li>
+                                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-md bg-white text-secondary-600 border border-gray-300 hover:bg-primary-50 hover:text-primary transition-colors">3</a>
+                            </li>
+                            <li class="flex items-center">...</li>
+                            <li>
+                                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-md bg-white text-secondary-600 border border-gray-300 hover:bg-primary-50 hover:text-primary transition-colors">8</a>
+                            </li>
+                            <li>
+                                <a href="#" class="w-10 h-10 flex items-center justify-center rounded-md bg-white text-secondary-600 border border-gray-300 hover:bg-primary-50 hover:text-primary transition-colors">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Newsletter -->
+        <section class="py-16 bg-primary-700 text-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold mb-4">Blog Yazılarımızı Takip Edin</h2>
+                    <p class="text-lg opacity-90 mb-8">Yeni blog yazılarımızdan, teknik ipuçlarından ve teknoloji haberlerinden haberdar olmak için abone olun.</p>
+                    <div class="flex flex-col sm:flex-row gap-2 max-w-lg mx-auto">
+                        <input type="email" placeholder="E-posta adresiniz" class="flex-grow p-3 rounded-md text-gray-800 focus:outline-none">
+                        <button class="bg-white text-primary hover:bg-gray-100 px-6 py-3 rounded-md font-medium transition-colors">Abone Ol</button>
+                    </div>
+                    <p class="text-sm opacity-70 mt-4">E-posta listesinden istediğiniz zaman çıkabilirsiniz. Bilgilerinizi asla üçüncü taraflarla paylaşmayız.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-800 text-white pt-12 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- Firma Bilgileri -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <span class="text-primary-300 text-2xl mr-2">TTS</span> Bilişim
+                    </h3>
+                    <p class="text-gray-300 mb-4">Profesyonel bilgisayar, telefon ve tablet teknik servis hizmetleri.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://facebook.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hızlı Bağlantılar -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-100">Hızlı Bağlantılar</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-primary-300 transition-colors">Ana Sayfa</a></li>
+                        <li><a href="hakkimizda.html" class="text-gray-300 hover:text-primary-300 transition-colors">Hakkımızda</a></li>
+                        <li><a href="hizmetlerimiz.html" class="text-gray-300 hover:text-primary-300 transition-colors">Hizmetlerimiz</a></li>
+                        <li><a href="yedek-parca.html" class="text-gray-300 hover:text-primary-300 transition-colors">Orijinal Yedek Parça</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-primary-300 transition-colors">Blog</a></li>
+                        <li><a href="iletisim.html" class="text-gray-300 hover:text-primary-300 transition-colors">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Hizmetler -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-100">Hizmetlerimiz</h4>
+                    <ul class="space-y-2">
+                        <li><a href="hizmetlerimiz.html#bilgisayar" class="text-gray-300 hover:text-primary-300 transition-colors">Bilgisayar Tamiri</a></li>
+                        <li><a href="hizmetlerimiz.html#telefon" class="text-gray-300 hover:text-primary-300 transition-colors">Telefon Tamiri</a></li>
+                        <li><a href="hizmetlerimiz.html#tablet" class="text-gray-300 hover:text-primary-300 transition-colors">Tablet Tamiri</a></li>
+                        <li><a href="hizmetlerimiz.html#anakart" class="text-gray-300 hover:text-primary-300 transition-colors">Anakart Tamiri</a></li>
+                        <li><a href="hizmetlerimiz.html#veri-kurtarma" class="text-gray-300 hover:text-primary-300 transition-colors">Veri Kurtarma</a></li>
+                        <li><a href="yedek-parca.html" class="text-gray-300 hover:text-primary-300 transition-colors">Orijinal Yedek Parça</a></li>
+                    </ul>
+                </div>
+                
+                <!-- İletişim Bilgileri -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-100">İletişim</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary-300"></i>
+                            <span>Sahrayıcedit mh. İnönü cd. Sinan sk. No:1a<br>Kadıköy, İstanbul</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-primary-300"></i>
+                            <span><a href="tel:+902165551234" class="hover:text-primary-300 transition-colors">0544 924 71 72 – 0216 302 10 10</a></span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary-300"></i>
+                            <span><a href="mailto:info@ttsbilisim.com" class="hover:text-primary-300 transition-colors">info@ttsbilisim.com</a></span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3 text-primary-300"></i>
+                            <span>Pzt - Cmt: 09:00 - 19:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Google Maps -->
+            <div class="mb-8">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12046.171111851305!2d29.02699!3d40.988599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab8679bfb3d31%3A0x7d75715e081dfa5c!2sKad%C4%B1k%C3%B6y%2C%20%C4%B0stanbul!5e0!3m2!1str!2str!4v1651339764653!5m2!1str!2str" class="w-full h-64 rounded-lg" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            <div class="border-t border-gray-700 py-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">© 2025 TTS Bilişim. Tüm hakları saklıdır.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary-300 transition-colors">Gizlilik Politikası</a>
+                        <a href="#" class="text-gray-400 hover:text-primary-300 transition-colors">Kullanım Koşulları</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

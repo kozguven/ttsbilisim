@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - TTS Bilişim</title>
+    <meta name="description" content="TTS Bilişim ile iletişime geçin. Adresimiz, telefon numaramız, e-posta adresimiz ve çalışma saatlerimiz hakkında bilgi alın. İletişim formumuz ile bize ulaşın.">
+    <meta name="keywords" content="TTS Bilişim, iletişim, adres, telefon, e-posta, teknik servis, Kadıköy">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'roboto': ['Roboto', 'sans-serif']
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: '#1a56db',
+                            50: '#f0f5ff',
+                            100: '#e0eaff',
+                            200: '#c7d7fe',
+                            300: '#a0b9fa',
+                            400: '#7590f5',
+                            500: '#4f67ed',
+                            600: '#3a48df',
+                            700: '#303ac7',
+                            800: '#2c31a1',
+                            900: '#2c3180'
+                        },
+                        secondary: {
+                            DEFAULT: '#4b5563',
+                            50: '#f8fafc',
+                            100: '#f0f5f9',
+                            200: '#e1e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <a href="index.html" class="flex items-center">
+                        <img src="img/logo.png" alt="TTS Bilişim Logo" class="h-12 mr-2">
+                        
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Ana Sayfa</a>
+                    <a href="hakkimizda.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Hakkımızda</a>
+                    <a href="hizmetlerimiz.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Hizmetlerimiz</a>
+                    <a href="yedek-parca.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Orijinal Yedek Parça</a>
+                    <a href="blog.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Blog</a>
+                    <a href="iletisim.html" class="text-primary font-medium hover:text-primary-700 transition-colors">İletişim</a>
+                </nav>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <nav id="mobile-menu" class="hidden bg-white px-4 py-3 md:hidden border-t border-gray-200">
+            <div class="flex flex-col space-y-3">
+                <a href="index.html" class="text-secondary-600 font-medium py-2">Ana Sayfa</a>
+                <a href="hakkimizda.html" class="text-secondary-600 font-medium py-2">Hakkımızda</a>
+                <a href="hizmetlerimiz.html" class="text-secondary-600 font-medium py-2">Hizmetlerimiz</a>
+                <a href="yedek-parca.html" class="text-secondary-600 font-medium py-2">Orijinal Yedek Parça</a>
+                <a href="blog.html" class="text-secondary-600 font-medium py-2">Blog</a>
+                <a href="iletisim.html" class="text-primary font-medium py-2">İletişim</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sayfa Başlığı -->
+        <section class="bg-primary-700 text-white py-16">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">İletişim</h1>
+                    <p class="text-lg text-white opacity-90">TTS Bilişim ile iletişime geçin, teknik servis ihtiyaçlarınız için bizimle irtibat kurun.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- İletişim Bilgileri -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- İletişim Kartı 1: Adres -->
+                    <div class="bg-gray-50 rounded-lg shadow-sm p-8 text-center">
+                        <div class="w-16 h-16 bg-primary rounded-full mx-auto flex items-center justify-center mb-6">
+                            <i class="fas fa-map-marker-alt text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-primary mb-3">Adresimiz</h3>
+                        <p class="text-secondary-600 mb-2">Sahrayıcedit mh. İnönü cd.</p>
+                        <p class="text-secondary-600 mb-2"> Sinan sk. No:1a</p>
+                        <p class="text-secondary-600">Kadıköy, İstanbul</p>
+                    </div>
+                    
+                    <!-- İletişim Kartı 2: Telefon -->
+                    <div class="bg-gray-50 rounded-lg shadow-sm p-8 text-center">
+                        <div class="w-16 h-16 bg-primary rounded-full mx-auto flex items-center justify-center mb-6">
+                            <i class="fas fa-phone-alt text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-primary mb-3">Telefonlarımız</h3>
+                        <p class="text-secondary-600 mb-2">Teknik Servis: <a href="tel:+902165551234" class="text-primary hover:underline">0544 924 71 72 – 0216 302 10 10</a></p>
+                        <p class="text-secondary-600 mb-2">WhatsApp: <a href="https://wa.me/905551234567" target="_blank" class="text-primary hover:underline">0544 924 71 72</a></p>
+                        <p class="text-secondary-600">Faks: 0216 555 67 89</p>
+                    </div>
+                    
+                    <!-- İletişim Kartı 3: E-posta -->
+                    <div class="bg-gray-50 rounded-lg shadow-sm p-8 text-center">
+                        <div class="w-16 h-16 bg-primary rounded-full mx-auto flex items-center justify-center mb-6">
+                            <i class="fas fa-envelope text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-primary mb-3">E-posta & Çalışma Saatleri</h3>
+                        <p class="text-secondary-600 mb-2">E-posta: <a href="mailto:info@ttsbilisim.com" class="text-primary hover:underline">info@ttsbilisim.com</a></p>
+                        <p class="text-secondary-600 mb-2">Pazartesi - Cumartesi: 09:00 - 19:00</p>
+                        <p class="text-secondary-600">Pazar: Kapalı</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Google Maps ve İletişim Formu -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Google Maps -->
+                    <div class="rounded-lg overflow-hidden shadow-md h-[500px]">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3012.088095865558!2d29.080603890702548!3d40.979551747342796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac7b6b9aec73f%3A0xfabad29babb99d9d!2zU2FocmF5xLEgQ2VkaXQsIFNpbmFuIFNva2HEn8SxIE5vOjEsIDM0NzM0IEthZMSxa8O2eS_EsHN0YW5idWw!5e0!3m2!1str!2str!4v1748375602677!5m2!1str!2str" class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    
+                    <!-- İletişim Formu -->
+                    <div class="bg-white rounded-lg shadow-md p-8">
+                        <h2 class="text-2xl font-bold text-primary mb-6">Bize Mesaj Gönderin</h2>
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-secondary-700 mb-1">Adınız Soyadınız *</label>
+                                    <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-secondary-700 mb-1">E-posta Adresiniz *</label>
+                                    <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="phone" class="block text-sm font-medium text-secondary-700 mb-1">Telefon Numaranız</label>
+                                <input type="tel" id="phone" name="phone" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="subject" class="block text-sm font-medium text-secondary-700 mb-1">Konu *</label>
+                                <select id="subject" name="subject" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    <option value="" disabled selected>Konu Seçiniz</option>
+                                    <option value="teknik-servis">Teknik Servis</option>
+                                    <option value="yedek-parca">Yedek Parça</option>
+                                    <option value="fiyat-teklifi">Fiyat Teklifi</option>
+                                    <option value="randevu">Randevu Alma</option>
+                                    <option value="diger">Diğer</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-sm font-medium text-secondary-700 mb-1">Mesajınız *</label>
+                                <textarea id="message" name="message" rows="5" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                            </div>
+                            
+                            <div class="mb-6 flex items-center">
+                                <input type="checkbox" id="privacy" name="privacy" required class="mr-2">
+                                <label for="privacy" class="text-sm text-secondary-600">
+                                    <a href="#" class="text-primary hover:underline">Gizlilik Politikamızı</a> okudum ve kabul ediyorum.
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-primary hover:bg-primary-700 text-white font-medium py-3 px-4 rounded-md transition-colors">
+                                Mesajı Gönder
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SSS -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-primary mb-4">Sıkça Sorulan Sorular</h2>
+                        <p class="text-lg text-secondary-600">İletişim konusunda sık sorulan sorulara yanıtlarımız</p>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-2">Nasıl randevu alabilirim?</h3>
+                            <p class="text-secondary-600">Randevu almak için yukarıdaki iletişim numaralarımızdan bizi arayabilir, WhatsApp üzerinden mesaj gönderebilir veya iletişim formumuzu doldurabilirsiniz. Size en kısa sürede dönüş yapacağız.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-2">Cihazımı size nasıl getirebilirim?</h3>
+                            <p class="text-secondary-600">Kadıköy'deki mağazamıza bizzat gelerek cihazınızı teslim edebilirsiniz. İsterseniz, İstanbul içi kurye hizmetimizden de faydalanabilirsiniz. Detaylı bilgi için lütfen bizi arayın.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-2">Hangi ödeme yöntemlerini kabul ediyorsunuz?</h3>
+                            <p class="text-secondary-600">Nakit, kredi kartı, banka havalesi ve mobil ödeme yöntemlerini kabul ediyoruz. Kredi kartına taksit imkanımız da bulunmaktadır.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-2">Tamir sonrası garanti var mı?</h3>
+                            <p class="text-secondary-600">Evet, tüm tamir işlemlerimiz için 6 ay garanti veriyoruz. Garanti süresi içinde yaşanan sorunlarda ücretsiz tekrar bakım ve onarım hizmeti sunuyoruz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Çağrı Merkezi -->
+        <section class="py-16 bg-primary">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center justify-center text-center md:text-left">
+                    <div class="mb-6 md:mb-0 md:mr-8">
+                        <h2 class="text-3xl font-bold text-white mb-2">7/24 Teknik Destek</h2>
+                        <p class="text-white text-opacity-90">Acil sorunlarınız için telefon desteğimiz her zaman yanınızda.</p>
+                    </div>
+                    <a href="tel:+902165551234" class="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-md font-bold text-xl transition-colors inline-flex items-center">
+                        <i class="fas fa-phone-alt mr-3"></i> 0544 924 71 72 – 0216 302 10 10
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-800 text-white pt-12 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- Firma Bilgileri -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <span class="text-primary-300 text-2xl mr-2">TTS</span> Bilişim
+                    </h3>
+                    <p class="text-gray-300 mb-4">Profesyonel bilgisayar, telefon ve tablet teknik servis hizmetleri.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://facebook.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hızlı Bağlantılar -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-100">Hızlı Bağlantılar</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-primary-300 transition-colors">Ana Sayfa</a></li>
+                        <li><a href="hakkimizda.html" class="text-gray-300 hover:text-primary-300 transition-colors">Hakkımızda</a></li>
+                        <li><a href="hizmetlerimiz.html" class="text-gray-300 hover:text-primary-300 transition-colors">Hizmetlerimiz</a></li>
+                        <li><a href="yedek-parca.html" class="text-gray-300 hover:text-primary-300 transition-colors">Orijinal Yedek Parça</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-primary-300 transition-colors">Blog</a></li>
+                        <li><a href="iletisim.html" class="text-gray-300 hover:text-primary-300 transition-colors">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Hizmetler -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-100">Hizmetlerimiz</h4>
+                    <ul class="space-y-2">
+                        <li><a href="hizmetlerimiz.html#bilgisayar" class="text-gray-300 hover:text-primary-300 transition-colors">Bilgisayar Tamiri</a></li>
+                        <li><a href="hizmetlerimiz.html#telefon" class="text-gray-300 hover:text-primary-300 transition-colors">Telefon Tamiri</a></li>
+                        <li><a href="hizmetlerimiz.html#tablet" class="text-gray-300 hover:text-primary-300 transition-colors">Tablet Tamiri</a></li>
+                        <li><a href="hizmetlerimiz.html#anakart" class="text-gray-300 hover:text-primary-300 transition-colors">Anakart Tamiri</a></li>
+                        <li><a href="hizmetlerimiz.html#veri-kurtarma" class="text-gray-300 hover:text-primary-300 transition-colors">Veri Kurtarma</a></li>
+                        <li><a href="yedek-parca.html" class="text-gray-300 hover:text-primary-300 transition-colors">Orijinal Yedek Parça</a></li>
+                    </ul>
+                </div>
+                
+                <!-- İletişim Bilgileri -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-100">İletişim</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary-300"></i>
+                            <span>Sahrayıcedit mh. İnönü cd. Sinan sk. No:1a<br>Kadıköy, İstanbul</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-primary-300"></i>
+                            <span><a href="tel:+902165551234" class="hover:text-primary-300 transition-colors">0544 924 71 72 – 0216 302 10 10</a></span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary-300"></i>
+                            <span><a href="mailto:info@ttsbilisim.com" class="hover:text-primary-300 transition-colors">info@ttsbilisim.com</a></span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3 text-primary-300"></i>
+                            <span>Pzt - Cmt: 09:00 - 19:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 py-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">© 2025 TTS Bilişim. Tüm hakları saklıdır.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary-300 transition-colors">Gizlilik Politikası</a>
+                        <a href="#" class="text-gray-400 hover:text-primary-300 transition-colors">Kullanım Koşulları</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

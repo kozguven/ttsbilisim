@@ -1,0 +1,20 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="100%" height="100%" fill="#e0eaff" />
+  <g transform="translate(100, 100)">
+    <rect x="-50" y="-40" width="100" height="80" rx="2" ry="2" fill="#1a56db"/>
+    <g transform="scale(0.9)">
+      <rect x="-40" y="-30" width="16" height="16" fill="#a0b9fa"/>
+      <rect x="-20" y="-30" width="16" height="16" fill="#a0b9fa"/>
+      <rect x="0" y="-30" width="16" height="16" fill="#a0b9fa"/>
+      <rect x="20" y="-30" width="16" height="16" fill="#a0b9fa"/>
+      <rect x="-40" y="-10" width="16" height="16" fill="#a0b9fa"/>
+      <rect x="-20" y="-10" width="16" height="16" fill="#a0b9fa"/>
+      <rect x="0" y="-10" width="16" height="16" fill="#a0b9fa"/>
+      <rect x="20" y="-10" width="16" height="16" fill="#a0b9fa"/>
+      <rect x="-40" y="10" width="16" height="16" fill="#a0b9fa"/>
+      <rect x="-20" y="10" width="16" height="16" fill="#a0b9fa"/>
+      <rect x="0" y="10" width="16" height="16" fill="#a0b9fa"/>
+      <rect x="20" y="10" width="16" height="16" fill="#a0b9fa"/>
+    </g>
+  </g>
+</svg>

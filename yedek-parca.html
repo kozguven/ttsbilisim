@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orijinal Yedek Parça - TTS Bilişim</title>
+    <meta name="description" content="TTS Bilişim'de tüm tamir işlemlerinde %100 orijinal yedek parçalar kullanıyoruz. Telefon, bilgisayar ve tablet tamiri için en kaliteli parçalarla hizmetinizdeyiz.">
+    <meta name="keywords" content="orijinal yedek parça, telefon ekranı, batarya, anakart, ram, ssd, TTS Bilişim">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'roboto': ['Roboto', 'sans-serif']
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: '#1a56db',
+                            50: '#f0f5ff',
+                            100: '#e0eaff',
+                            200: '#c7d7fe',
+                            300: '#a0b9fa',
+                            400: '#7590f5',
+                            500: '#4f67ed',
+                            600: '#3a48df',
+                            700: '#303ac7',
+                            800: '#2c31a1',
+                            900: '#2c3180'
+                        },
+                        secondary: {
+                            DEFAULT: '#4b5563',
+                            50: '#f8fafc',
+                            100: '#f0f5f9',
+                            200: '#e1e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <a href="index.html" class="flex items-center">
+                        <img src="img/logo.png" alt="TTS Bilişim Logo" class="h-12 mr-2">
+                        
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Ana Sayfa</a>
+                    <a href="hakkimizda.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Hakkımızda</a>
+                    <a href="hizmetlerimiz.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Hizmetlerimiz</a>
+                    <a href="yedek-parca.html" class="text-primary font-medium hover:text-primary-700 transition-colors">Orijinal Yedek Parça</a>
+                    <a href="blog.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Blog</a>
+                    <a href="iletisim.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">İletişim</a>
+                </nav>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <nav id="mobile-menu" class="hidden bg-white px-4 py-3 md:hidden border-t border-gray-200">
+            <div class="flex flex-col space-y-3">
+                <a href="index.html" class="text-secondary-600 font-medium py-2">Ana Sayfa</a>
+                <a href="hakkimizda.html" class="text-secondary-600 font-medium py-2">Hakkımızda</a>
+                <a href="hizmetlerimiz.html" class="text-secondary-600 font-medium py-2">Hizmetlerimiz</a>
+                <a href="yedek-parca.html" class="text-primary font-medium py-2">Orijinal Yedek Parça</a>
+                <a href="blog.html" class="text-secondary-600 font-medium py-2">Blog</a>
+                <a href="iletisim.html" class="text-secondary-600 font-medium py-2">İletişim</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sayfa Başlığı -->
+        <section class="bg-primary-700 text-white py-16">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Orijinal Yedek Parça</h1>
+                    <p class="text-lg text-white opacity-90">TTS Bilişim'de tüm tamir işlemlerinde %100 orijinal yedek parçalar kullanıyoruz. Cihazınıza değer katıyoruz.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Neden Orijinal Parça -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 class="text-3xl font-bold text-primary mb-6">Neden Orijinal Yedek Parça Kullanmalısınız?</h2>
+                            <p class="text-secondary-600 mb-4">Elektronik cihazlarınız için orijinal yedek parçalar kullanmak, cihazınızın performansı, dayanıklılığı ve güvenliği açısından büyük önem taşır. Taklit veya uyumlu parçalar, kısa vadede daha ekonomik görünse de, uzun vadede cihazınıza zarar verebilir ve daha büyük sorunlara yol açabilir.</p>
+                            <p class="text-secondary-600 mb-4">TTS Bilişim olarak, tüm tamir işlemlerinde %100 orijinal yedek parça kullanarak, müşterilerimizin cihazlarının uzun ömürlü olmasını ve memnuniyetlerini garanti altına alıyoruz.</p>
+                            
+                            <div class="mt-8 space-y-4">
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-check text-white"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="text-lg font-semibold text-primary-700">Daha Uzun Ömür</h3>
+                                        <p class="text-secondary-600">Orijinal parçalar, cihazınızla tam uyumlu olarak tasarlanmış olup daha uzun süre ve daha verimli çalışır.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-shield-alt text-white"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="text-lg font-semibold text-primary-700">Garanti Koruma</h3>
+                                        <p class="text-secondary-600">Orijinal olmayan parçalar kullanmak, cihazınızın garantisini geçersiz kılabilir. Orijinal parçalar kullanarak, cihaz garantinizi korursunuz.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-tachometer-alt text-white"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="text-lg font-semibold text-primary-700">Optimum Performans</h3>
+                                        <p class="text-secondary-600">Orijinal parçalar, cihazınızın maksimum performansla çalışmasını sağlar ve beklenmedik sorunları önler.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-lock text-white"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h3 class="text-lg font-semibold text-primary-700">Güvenlik</h3>
+                                        <p class="text-secondary-600">Orijinal olmayan batarya veya şarj adaptörleri gibi parçalar güvenlik riski oluşturabilir. Orijinal parçalar, en yüksek güvenlik standartlarına göre üretilir.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-primary-100 p-12 rounded-lg">
+                            <div class="h-64 bg-primary-700 mb-6 rounded flex items-center justify-center">
+                                <i class="fas fa-tools text-white text-8xl"></i>
+                            </div>
+                            <div class="text-center p-4 bg-white rounded-lg shadow-md">
+                                <h3 class="text-2xl font-bold text-primary mb-2">%100 Orijinal Parça</h3>
+                                <p class="text-secondary-600 mb-4">TTS Bilişim olarak, cihazınızın tamirinde sadece orijinal parçalar kullanıyoruz.</p>
+                                <a href="iletisim.html" class="inline-block bg-primary hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-md transition-colors">Hemen İletişime Geçin</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Yedek Parça Kategorileri -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-primary mb-4">Yedek Parça Kategorilerimiz</h2>
+                    <p class="text-lg text-secondary-600 max-w-3xl mx-auto">Tüm cihazlarınız için ihtiyacınız olan orijinal yedek parçaları TTS Bilişim'de bulabilirsiniz.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Kategori 1: Telefon Parçaları -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-48 bg-primary-100 flex items-center justify-center">
+                            <i class="fas fa-mobile-alt text-primary-700 text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-3">Telefon Parçaları</h3>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Ekran ve Dokunmatik Paneller</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Bataryalar</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Şarj Soketleri</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Kamera Modülleri</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Hoparlör ve Mikrofon Üniteleri</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Anakart Çipleri</span>
+                                </li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="iletisim.html" class="inline-block bg-primary hover:bg-primary-700 text-white font-medium px-6 py-2 rounded-md transition-colors">Fiyat Sorun</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Kategori 2: Bilgisayar ve Laptop Parçaları -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-48 bg-primary-100 flex items-center justify-center">
+                            <i class="fas fa-laptop text-primary-700 text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-3">Bilgisayar Parçaları</h3>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Laptop Ekranları</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Laptop Bataryaları</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Klavyeler</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>SSD ve HDD Sürücüler</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>RAM Modülleri</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Soğutma Fanları</span>
+                                </li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="iletisim.html" class="inline-block bg-primary hover:bg-primary-700 text-white font-medium px-6 py-2 rounded-md transition-colors">Fiyat Sorun</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Kategori 3: Tablet Parçaları -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-48 bg-primary-100 flex items-center justify-center">
+                            <i class="fas fa-tablet-alt text-primary-700 text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-3">Tablet Parçaları</h3>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Dokunmatik Ekranlar</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Bataryalar</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Şarj Soketleri</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Kamera Modülleri</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Ses Kontrol Düğmeleri</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Anakart Bileşenleri</span>
+                                </li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="iletisim.html" class="inline-block bg-primary hover:bg-primary-700 text-white font-medium px-6 py-2 rounded-md transition-colors">Fiyat Sorun</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Kategori 4: Şarj Cihazları ve Adaptörler -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-48 bg-primary-100 flex items-center justify-center">
+                            <i class="fas fa-plug text-primary-700 text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-3">Şarj Üniteleri</h3>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Orijinal Telefon Şarj Cihazları</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Laptop Adaptörleri</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>USB Kablolar</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Hızlı Şarj Adaptörleri</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Kablosuz Şarj Üniteleri</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Type-C, Lightning ve Micro USB Kablolar</span>
+                                </li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="iletisim.html" class="inline-block bg-primary hover:bg-primary-700 text-white font-medium px-6 py-2 rounded-md transition-colors">Fiyat Sorun</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Kategori 5: Anakart Bileşenleri -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-48 bg-primary-100 flex items-center justify-center">
+                            <i class="fas fa-microchip text-primary-700 text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-3">Anakart Bileşenleri</h3>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>CPU ve GPU Çipleri</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Güç Yönetim Entegreleri</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>BGA Soketi Bileşenleri</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>SMD Komponentler</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Hafıza IC'leri</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Ses ve Görüntü Entegreleri</span>
+                                </li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="iletisim.html" class="inline-block bg-primary hover:bg-primary-700 text-white font-medium px-6 py-2 rounded-md transition-colors">Fiyat Sorun</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Kategori 6: Diğer Aksesuar ve Parçalar -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="h-48 bg-primary-100 flex items-center justify-center">
+                            <i class="fas fa-cogs text-primary-700 text-6xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-3">Diğer Parçalar</h3>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Ekran Koruyucular</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Termal Macunlar</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Hafıza Kartları</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Hoparlör Sistemleri</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Kablosuz Kulaklıklar</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-angle-right text-primary mr-2"></i>
+                                    <span>Kablolar ve Adaptörler</span>
+                                </li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="iletisim.html" class="inline-block bg-primary hover:bg-primary-700 text-white font-medium px-6 py-2 rounded-md transition-colors">Fiyat Sorun</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Marka Partnerleri -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-primary mb-4">Marka Ortaklarımız</h2>
+                    <p class="text-lg text-secondary-600 max-w-3xl mx-auto">TTS Bilişim olarak, orijinal yedek parçaları doğrudan üreticilerden ve yetkili distribütörlerden temin ediyoruz.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                    <!-- Marka 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fab fa-apple text-5xl text-gray-700 mb-2"></i>
+                            <p class="font-medium">Apple</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Marka 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fab fa-samsung text-5xl text-gray-700 mb-2"></i>
+                            <p class="font-medium">Samsung</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Marka 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-mobile-alt text-5xl text-gray-700 mb-2"></i>
+                            <p class="font-medium">Huawei</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Marka 4 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-laptop text-5xl text-gray-700 mb-2"></i>
+                            <p class="font-medium">HP</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Marka 5 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-laptop-code text-5xl text-gray-700 mb-2"></i>
+                            <p class="font-medium">Dell</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Marka 6 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-laptop text-5xl text-gray-700 mb-2"></i>
+                            <p class="font-medium">Lenovo</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Marka 7 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fab fa-windows text-5xl text-gray-700 mb-2"></i>
+                            <p class="font-medium">Microsoft</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Marka 8 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-mobile text-5xl text-gray-700 mb-2"></i>
+                            <p class="font-medium">Xiaomi</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Marka 9 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-tablet-alt text-5xl text-gray-700 mb-2"></i>
+                            <p class="font-medium">iPad</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Marka 10 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-microchip text-5xl text-gray-700 mb-2"></i>
+                            <p class="font-medium">Intel</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Marka 11 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-microchip text-5xl text-gray-700 mb-2"></i>
+                            <p class="font-medium">AMD</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Marka 12 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-hdd text-5xl text-gray-700 mb-2"></i>
+                            <p class="font-medium">SanDisk</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Orijinallik Testi -->
+        <section class="py-16 bg-primary-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="order-2 lg:order-1">
+                            <h2 class="text-3xl font-bold text-primary mb-6">Parça Orijinallik Testi</h2>
+                            <p class="text-secondary-600 mb-4">TTS Bilişim olarak, orijinal ve kaliteli yedek parça kullandığımızdan emin olabilmeniz için, tüm parçalarımızın orijinallik kontrolünü yapıyor ve sertifikalarını müşterilerimizle paylaşıyoruz.</p>
+                            <p class="text-secondary-600 mb-6">Cihazınıza takılan parçanın orijinal olup olmadığını anlamanın birkaç yolu vardır:</p>
+                            
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-primary mt-1 mr-3 text-xl"></i>
+                                    <div>
+                                        <h3 class="font-semibold text-primary-700">Seri Numarası Kontrolü</h3>
+                                        <p class="text-secondary-600">Her orijinal parçanın kendine özgü bir seri numarası vardır. Bu numara üzerinden üreticinin sitesinde doğrulama yapabilirsiniz.</p>
+                                    </div>
+                                </li>
+                                
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-primary mt-1 mr-3 text-xl"></i>
+                                    <div>
+                                        <h3 class="font-semibold text-primary-700">Hologram ve Güvenlik İşaretleri</h3>
+                                        <p class="text-secondary-600">Orijinal parçaların paketlerinde genellikle hologram veya özel güvenlik işaretleri bulunur.</p>
+                                    </div>
+                                </li>
+                                
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-primary mt-1 mr-3 text-xl"></i>
+                                    <div>
+                                        <h3 class="font-semibold text-primary-700">Kalite ve Performans</h3>
+                                        <p class="text-secondary-600">Orijinal parçalar, taklit ürünlere göre çok daha yüksek kalitede üretilir ve daha iyi performans gösterir.</p>
+                                    </div>
+                                </li>
+                                
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-primary mt-1 mr-3 text-xl"></i>
+                                    <div>
+                                        <h3 class="font-semibold text-primary-700">Garanti Belgesi</h3>
+                                        <p class="text-secondary-600">TTS Bilişim olarak, tüm kullandığımız parçalar için 6 ay garanti belgesi veriyoruz.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                            <div class="mt-8">
+                                <a href="iletisim.html" class="inline-block bg-primary hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-md transition-colors">Yedek Parça Fiyatları İçin İletişime Geçin</a>
+                            </div>
+                        </div>
+                        <div class="order-1 lg:order-2 bg-white p-8 rounded-lg shadow-md">
+                            <div class="h-64 bg-primary-100 mb-6 rounded flex items-center justify-center">
+                                <i class="fas fa-search-plus text-primary-700 text-8xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-primary mb-4 text-center">Ücretsiz Orijinallik Kontrolü</h3>
+                            <p class="text-secondary-600 mb-6 text-center">Başka bir servisten aldığınız parçanın orijinal olup olmadığından emin değil misiniz? Ücretsiz orijinallik kontrolü hizmetimizden yararlanabilirsiniz.</p>
+                            <div class="text-center">
+                                <a href="tel:+902165551234" class="inline-flex items-center justify-center bg-primary-100 text-primary hover:bg-primary-200 px-6 py-3 rounded-md font-medium transition-colors">
+                                    <i class="fas fa-phone-alt mr-2"></i> Hemen Arayın
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- İletişim CTA -->
+        <section class="py-16 bg-primary">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="mb-6 md:mb-0 text-center md:text-left">
+                        <h2 class="text-3xl font-bold text-white mb-2">Yedek parça mı arıyorsunuz?</h2>
+                        <p class="text-white text-opacity-90">Orijinal yedek parçalar için bizimle iletişime geçin.</p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="iletisim.html" class="bg-white text-primary hover:bg-gray-100 px-6 py-3 rounded-md font-medium transition-colors">İletişime Geçin</a>
+                        <a href="tel:+902165551234" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary px-6 py-3 rounded-md font-medium transition-colors flex items-center">
+                            <i class="fas fa-phone-alt mr-2"></i> Hemen Arayın
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-800 text-white pt-12 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- Firma Bilgileri -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <span class="text-primary-300 text-2xl mr-2">TTS</span> Bilişim
+                    </h3>
+                    <p class="text-gray-300 mb-4">Profesyonel bilgisayar, telefon ve tablet teknik servis hizmetleri.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://facebook.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hızlı Bağlantılar -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-100">Hızlı Bağlantılar</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-primary-300 transition-colors">Ana Sayfa</a></li>
+                        <li><a href="hakkimizda.html" class="text-gray-300 hover:text-primary-300 transition-colors">Hakkımızda</a></li>
+                        <li><a href="hizmetlerimiz.html" class="text-gray-300 hover:text-primary-300 transition-colors">Hizmetlerimiz</a></li>
+                        <li><a href="yedek-parca.html" class="text-gray-300 hover:text-primary-300 transition-colors">Orijinal Yedek Parça</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-primary-300 transition-colors">Blog</a></li>
+                        <li><a href="iletisim.html" class="text-gray-300 hover:text-primary-300 transition-colors">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Hizmetler -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-100">Hizmetlerimiz</h4>
+                    <ul class="space-y-2">
+                        <li><a href="hizmetlerimiz.html#bilgisayar" class="text-gray-300 hover:text-primary-300 transition-colors">Bilgisayar Tamiri</a></li>
+                        <li><a href="hizmetlerimiz.html#telefon" class="text-gray-300 hover:text-primary-300 transition-colors">Telefon Tamiri</a></li>
+                        <li><a href="hizmetlerimiz.html#tablet" class="text-gray-300 hover:text-primary-300 transition-colors">Tablet Tamiri</a></li>
+                        <li><a href="hizmetlerimiz.html#anakart" class="text-gray-300 hover:text-primary-300 transition-colors">Anakart Tamiri</a></li>
+                        <li><a href="hizmetlerimiz.html#veri-kurtarma" class="text-gray-300 hover:text-primary-300 transition-colors">Veri Kurtarma</a></li>
+                        <li><a href="yedek-parca.html" class="text-gray-300 hover:text-primary-300 transition-colors">Orijinal Yedek Parça</a></li>
+                    </ul>
+                </div>
+                
+                <!-- İletişim Bilgileri -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-100">İletişim</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary-300"></i>
+                            <span>Sahrayıcedit mh. İnönü cd. Sinan sk. No:1a<br>Kadıköy, İstanbul</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-primary-300"></i>
+                            <span><a href="tel:+902165551234" class="hover:text-primary-300 transition-colors">0544 924 71 72 – 0216 302 10 10</a></span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary-300"></i>
+                            <span><a href="mailto:info@ttsbilisim.com" class="hover:text-primary-300 transition-colors">info@ttsbilisim.com</a></span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3 text-primary-300"></i>
+                            <span>Pzt - Cmt: 09:00 - 19:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Google Maps -->
+            <div class="mb-8">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12046.171111851305!2d29.02699!3d40.988599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab8679bfb3d31%3A0x7d75715e081dfa5c!2sKad%C4%B1k%C3%B6y%2C%20%C4%B0stanbul!5e0!3m2!1str!2str!4v1651339764653!5m2!1str!2str" class="w-full h-64 rounded-lg" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            <div class="border-t border-gray-700 py-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">© 2025 TTS Bilişim. Tüm hakları saklıdır.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary-300 transition-colors">Gizlilik Politikası</a>
+                        <a href="#" class="text-gray-400 hover:text-primary-300 transition-colors">Kullanım Koşulları</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

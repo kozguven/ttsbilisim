@@ -1,0 +1,145 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <!-- Premium Tablet Gradients -->
+    <linearGradient id="tabletBodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#047857;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#065f46;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="tabletScreenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="interfaceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="tabletCameraGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#64748b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+    </radialGradient>
+    
+    <radialGradient id="tabletGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- Advanced Filters -->
+    <filter id="premiumTabletShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="15" stdDeviation="20" flood-color="#000000" flood-opacity="0.25"/>
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#10b981" flood-opacity="0.15"/>
+    </filter>
+    
+    <filter id="tabletScreenGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="tabletInnerShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    
+    <filter id="appShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+    
+    <!-- Patterns -->
+    <pattern id="gridPattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="0.5" fill="#10b981" opacity="0.1"/>
+    </pattern>
+  </defs>
+  
+  <g transform="translate(100, 100)">
+    <!-- Tablet Shadow -->
+    <ellipse cx="3" cy="85" rx="65" ry="12" fill="#000000" opacity="0.15"/>
+    
+    <!-- Tablet Body -->
+    <rect x="-60" y="-75" width="120" height="150" rx="20" fill="url(#tabletGrad)" filter="url(#tabletShadow)"/>
+    
+    <!-- Screen -->
+    <rect x="-55" y="-65" width="110" height="125" rx="15" fill="url(#tabletScreenGrad)" filter="url(#tabletInnerShadow)"/>
+    
+    <!-- Status Bar -->
+    <rect x="-53" y="-63" width="106" height="10" rx="3" fill="#e2e8f0"/>
+    <text x="-50" y="-55" font-family="Arial, sans-serif" font-size="6" fill="#64748b">9:41</text>
+    <circle cx="35" cy="-58" r="2" fill="#22c55e"/>
+    <rect x="38" y="-59.5" width="12" height="3" rx="1.5" fill="#1e293b"/>
+    <rect x="39" y="-59" width="10" height="2" rx="1" fill="#22c55e"/>
+    
+    <!-- Navigation Bar -->
+    <rect x="-53" y="-48" width="106" height="8" rx="2" fill="#f1f5f9"/>
+    <circle cx="-45" cy="-44" r="2" fill="#ef4444"/>
+    <circle cx="-38" cy="-44" r="2" fill="#f59e0b"/>
+    <circle cx="-31" cy="-44" r="2" fill="#22c55e"/>
+    <rect x="-20" y="-46" width="60" height="4" rx="2" fill="#e2e8f0"/>
+    
+    <!-- Main Content Area -->
+    <rect x="-50" y="-35" width="100" height="80" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    
+    <!-- Content Grid -->
+    <g>
+      <!-- Header -->
+      <rect x="-45" y="-30" width="90" height="8" rx="2" fill="#3b82f6"/>
+      <rect x="-45" y="-20" width="60" height="3" rx="1" fill="#64748b"/>
+      <rect x="-45" y="-15" width="70" height="3" rx="1" fill="#64748b"/>
+      
+      <!-- Image Placeholders -->
+      <rect x="-45" y="-8" width="25" height="20" rx="3" fill="#e2e8f0"/>
+      <rect x="-15" y="-8" width="25" height="20" rx="3" fill="#e2e8f0"/>
+      <rect x="15" y="-8" width="25" height="20" rx="3" fill="#e2e8f0"/>
+      
+      <!-- Text Content -->
+      <rect x="-45" y="16" width="90" height="2" rx="1" fill="#64748b"/>
+      <rect x="-45" y="20" width="75" height="2" rx="1" fill="#64748b"/>
+      <rect x="-45" y="24" width="80" height="2" rx="1" fill="#64748b"/>
+      <rect x="-45" y="28" width="60" height="2" rx="1" fill="#64748b"/>
+      
+      <!-- Button -->
+      <rect x="-20" y="35" width="40" height="8" rx="4" fill="#10b981"/>
+    </g>
+    
+    <!-- Bottom Navigation -->
+    <rect x="-50" y="50" width="100" height="12" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+    <circle cx="-35" cy="56" r="3" fill="#3b82f6"/>
+    <circle cx="-15" cy="56" r="3" fill="#64748b"/>
+    <circle cx="5" cy="56" r="3" fill="#64748b"/>
+    <circle cx="25" cy="56" r="3" fill="#64748b"/>
+    
+    <!-- Home Button -->
+    <circle cx="0" cy="68" r="6" fill="#e2e8f0" stroke="#10b981" stroke-width="2"/>
+    <circle cx="0" cy="68" r="3" fill="#10b981"/>
+    
+    <!-- Camera -->
+    <circle cx="0" cy="-68" r="4" fill="url(#tabletCameraGrad)"/>
+    <circle cx="0" cy="-68" r="2" fill="#475569"/>
+    
+    <!-- Speakers -->
+    <g fill="#475569">
+      <circle cx="-45" cy="-68" r="1.5"/>
+      <circle cx="-40" cy="-68" r="1.5"/>
+      <circle cx="-35" cy="-68" r="1.5"/>
+      <circle cx="35" cy="-68" r="1.5"/>
+      <circle cx="40" cy="-68" r="1.5"/>
+      <circle cx="45" cy="-68" r="1.5"/>
+    </g>
+    
+    <!-- Side Buttons -->
+    <rect x="-62" y="-30" width="2" height="15" rx="1" fill="#059669"/>
+    <rect x="-62" y="-10" width="2" height="10" rx="1" fill="#059669"/>
+    <rect x="60" y="-20" width="2" height="12" rx="1" fill="#059669"/>
+    
+    <!-- Charging Port -->
+    <rect x="-6" y="73" width="12" height="2" rx="1" fill="#475569"/>
+    
+    <!-- Reflection -->
+    <rect x="-53" y="-63" width="30" height="60" rx="15" fill="url(#tabletScreenGrad)" opacity="0.3"/>
+  </g>
+</svg>

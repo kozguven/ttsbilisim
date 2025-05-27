@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hizmetlerimiz - TTS Bilişim</title>
+    <meta name="description" content="TTS Bilişim'in sunduğu bilgisayar, telefon ve tablet tamiri, anakart tamiri, veri kurtarma ve orijinal yedek parça hizmetleri hakkında detaylı bilgiler.">
+    <meta name="keywords" content="teknik servis, bilgisayar tamiri, telefon tamiri, tablet tamiri, anakart tamiri, veri kurtarma, orijinal yedek parça, TTS Bilişim">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'roboto': ['Roboto', 'sans-serif']
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: '#1a56db',
+                            50: '#f0f5ff',
+                            100: '#e0eaff',
+                            200: '#c7d7fe',
+                            300: '#a0b9fa',
+                            400: '#7590f5',
+                            500: '#4f67ed',
+                            600: '#3a48df',
+                            700: '#303ac7',
+                            800: '#2c31a1',
+                            900: '#2c3180'
+                        },
+                        secondary: {
+                            DEFAULT: '#4b5563',
+                            50: '#f8fafc',
+                            100: '#f0f5f9',
+                            200: '#e1e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .service-section:target {
+            scroll-margin-top: 100px;
+            animation: highlight 1.5s ease;
+        }
+        
+        @keyframes highlight {
+            0% { background-color: rgba(26, 86, 219, 0.1); }
+            100% { background-color: transparent; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <a href="index.html" class="flex items-center">
+                        <img src="img/logo.png" alt="TTS Bilişim Logo" class="h-12 mr-2">
+                        
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Ana Sayfa</a>
+                    <a href="hakkimizda.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Hakkımızda</a>
+                    <a href="hizmetlerimiz.html" class="text-primary font-medium hover:text-primary-700 transition-colors">Hizmetlerimiz</a>
+                    <a href="yedek-parca.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Orijinal Yedek Parça</a>
+                    <a href="blog.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Blog</a>
+                    <a href="iletisim.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">İletişim</a>
+                </nav>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <nav id="mobile-menu" class="hidden bg-white px-4 py-3 md:hidden border-t border-gray-200">
+            <div class="flex flex-col space-y-3">
+                <a href="index.html" class="text-secondary-600 font-medium py-2">Ana Sayfa</a>
+                <a href="hakkimizda.html" class="text-secondary-600 font-medium py-2">Hakkımızda</a>
+                <a href="hizmetlerimiz.html" class="text-primary font-medium py-2">Hizmetlerimiz</a>
+                <a href="yedek-parca.html" class="text-secondary-600 font-medium py-2">Orijinal Yedek Parça</a>
+                <a href="blog.html" class="text-secondary-600 font-medium py-2">Blog</a>
+                <a href="iletisim.html" class="text-secondary-600 font-medium py-2">İletişim</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sayfa Başlığı -->
+        <section class="bg-primary-700 text-white py-16">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Hizmetlerimiz</h1>
+                    <p class="text-lg text-white opacity-90">TTS Bilişim olarak elektronik cihazlarınız için profesyonel teknik servis hizmetleri sunuyoruz.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Hizmet Navigasyonu -->
+        <section class="bg-white py-6 shadow-md sticky top-[72px] z-40">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#bilgisayar" class="px-4 py-2 bg-primary-50 text-primary rounded-md hover:bg-primary-100 transition-colors">Bilgisayar Tamiri</a>
+                    <a href="#telefon" class="px-4 py-2 bg-primary-50 text-primary rounded-md hover:bg-primary-100 transition-colors">Telefon Tamiri</a>
+                    <a href="#tablet" class="px-4 py-2 bg-primary-50 text-primary rounded-md hover:bg-primary-100 transition-colors">Tablet Tamiri</a>
+                    <a href="#anakart" class="px-4 py-2 bg-primary-50 text-primary rounded-md hover:bg-primary-100 transition-colors">Anakart Tamiri</a>
+                    <a href="#veri-kurtarma" class="px-4 py-2 bg-primary-50 text-primary rounded-md hover:bg-primary-100 transition-colors">Veri Kurtarma</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Bilgisayar Tamiri -->
+        <section id="bilgisayar" class="py-16 bg-white service-section">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="order-2 lg:order-1">
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-full mb-6">
+                                <i class="fas fa-laptop text-white text-2xl"></i>
+                            </div>
+                            <h2 class="text-3xl font-bold text-primary mb-6">Bilgisayar & Laptop Tamiri</h2>
+                            <p class="text-secondary-600 mb-4">TTS Bilişim olarak, her marka ve model bilgisayar ve laptop için profesyonel teknik servis hizmeti sunuyoruz. Uzman teknisyenlerimiz ve orijinal yedek parçalarımız ile cihazlarınızı kısa sürede tamir ediyoruz.</p>
+                            
+                            <h3 class="text-xl font-semibold text-primary-700 mt-8 mb-3">Sunduğumuz Hizmetler</h3>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Donanım sorunları ve arızaların giderilmesi</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Ekran, klavye, batarya değişimi</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">İşletim sistemi kurulumu ve güncelleme</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Virüs temizleme ve güvenlik önlemleri</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Aşırı ısınma problemlerinin çözümü</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Yazılım sorunlarının çözümü</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">RAM ve SSD/HDD yükseltmeleri</span>
+                                </li>
+                            </ul>
+                            
+                            <a href="iletisim.html" class="inline-block bg-primary hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-md transition-colors">Hemen İletişime Geçin</a>
+                        </div>
+                        <div class="order-1 lg:order-2 bg-primary-100 rounded-xl p-8 flex items-center justify-center h-72">
+                            <i class="fas fa-laptop-code text-primary-700 text-9xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Telefon Tamiri -->
+        <section id="telefon" class="py-16 bg-gray-50 service-section">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="bg-primary-100 rounded-xl p-8 flex items-center justify-center h-72">
+                            <i class="fas fa-mobile-alt text-primary-700 text-9xl"></i>
+                        </div>
+                        <div>
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-full mb-6">
+                                <i class="fas fa-mobile-alt text-white text-2xl"></i>
+                            </div>
+                            <h2 class="text-3xl font-bold text-primary mb-6">Akıllı Telefon Tamiri</h2>
+                            <p class="text-secondary-600 mb-4">iPhone, Samsung ve diğer markalara ait tüm akıllı telefonlar için ekran, batarya ve anakart onarımları yapıyoruz. Cihazlarınız için sadece orijinal yedek parça kullanıyoruz.</p>
+                            
+                            <h3 class="text-xl font-semibold text-primary-700 mt-8 mb-3">Sunduğumuz Hizmetler</h3>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Ekran değişimi ve tamiri</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Batarya değişimi</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Şarj soketi ve güç düğmesi tamiri</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Hoparlör ve mikrofon değişimi</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Yazılımsal sorunların çözümü</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Su hasarı onarımı</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Anakart tamiri ve chip değişimi</span>
+                                </li>
+                            </ul>
+                            
+                            <a href="iletisim.html" class="inline-block bg-primary hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-md transition-colors">Hemen İletişime Geçin</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tablet Tamiri -->
+        <section id="tablet" class="py-16 bg-white service-section">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="order-2 lg:order-1">
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-full mb-6">
+                                <i class="fas fa-tablet-alt text-white text-2xl"></i>
+                            </div>
+                            <h2 class="text-3xl font-bold text-primary mb-6">Tablet Tamiri</h2>
+                            <p class="text-secondary-600 mb-4">iPad, Samsung Tab ve diğer tablet modelleri için orijinal parçalarla tamir hizmeti sunuyoruz. Ekran değişimi, batarya değişimi ve diğer teknik sorunların çözümü için uzman kadromuzla yanınızdayız.</p>
+                            
+                            <h3 class="text-xl font-semibold text-primary-700 mt-8 mb-3">Sunduğumuz Hizmetler</h3>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Ekran değişimi ve tamiri</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Batarya değişimi</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Şarj soketi ve düğme tamiri</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Yazılım güncellemesi ve sorunları</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Su hasarı onarımı</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Anakart tamiri</span>
+                                </li>
+                            </ul>
+                            
+                            <a href="iletisim.html" class="inline-block bg-primary hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-md transition-colors">Hemen İletişime Geçin</a>
+                        </div>
+                        <div class="order-1 lg:order-2 bg-primary-100 rounded-xl p-8 flex items-center justify-center h-72">
+                            <i class="fas fa-tablet-alt text-primary-700 text-9xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Anakart Tamiri -->
+        <section id="anakart" class="py-16 bg-gray-50 service-section">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="bg-primary-100 rounded-xl p-8 flex items-center justify-center h-72">
+                            <i class="fas fa-microchip text-primary-700 text-9xl"></i>
+                        </div>
+                        <div>
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-full mb-6">
+                                <i class="fas fa-microchip text-white text-2xl"></i>
+                            </div>
+                            <h2 class="text-3xl font-bold text-primary mb-6">Anakart Tamiri</h2>
+                            <p class="text-secondary-600 mb-4">Mikro düzeyde anakart onarımları ve BGA chip değişimi konusunda uzman hizmet veriyoruz. Bilgisayar, telefon ve tabletlerin en karmaşık sorunlarına çözüm üretiyoruz.</p>
+                            
+                            <h3 class="text-xl font-semibold text-primary-700 mt-8 mb-3">Sunduğumuz Hizmetler</h3>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Mikro lehimleme işlemleri</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">BGA chip değişimi ve reballing</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Kısa devre tespiti ve onarımı</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Su hasarı sonrası anakart tamiri</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Güç yönetim IC değişimi</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">BIOS/UEFI sorunlarının çözümü</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Laptop anakart tamiri</span>
+                                </li>
+                            </ul>
+                            
+                            <a href="iletisim.html" class="inline-block bg-primary hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-md transition-colors">Hemen İletişime Geçin</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Veri Kurtarma -->
+        <section id="veri-kurtarma" class="py-16 bg-white service-section">
+            <div class="container mx-auto px-4">
+                <div class="max-w-5xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="order-2 lg:order-1">
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-full mb-6">
+                                <i class="fas fa-shield-alt text-white text-2xl"></i>
+                            </div>
+                            <h2 class="text-3xl font-bold text-primary mb-6">Veri Kurtarma</h2>
+                            <p class="text-secondary-600 mb-4">Bozulan cihazlarınızdan, hasarlı disklerden ve çeşitli veri depolama birimlerinden değerli verilerinizi kurtarıyoruz. Fotoğraflarınız, belgeleriniz ve diğer önemli dosyalarınız için profesyonel veri kurtarma hizmeti sunuyoruz.</p>
+                            
+                            <h3 class="text-xl font-semibold text-primary-700 mt-8 mb-3">Sunduğumuz Hizmetler</h3>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">HDD ve SSD'lerden veri kurtarma</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">USB flash belleklerden veri kurtarma</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Hafıza kartlarından veri kurtarma</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Silinen dosyaların kurtarılması</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Fiziksel hasarlı disklerden veri kurtarma</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">RAID sistemlerinden veri kurtarma</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                                    <span class="text-secondary-600">Akıllı telefonlardan silinen verilerin kurtarılması</span>
+                                </li>
+                            </ul>
+                            
+                            <a href="iletisim.html" class="inline-block bg-primary hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-md transition-colors">Hemen İletişime Geçin</a>
+                        </div>
+                        <div class="order-1 lg:order-2 bg-primary-100 rounded-xl p-8 flex items-center justify-center h-72">
+                            <i class="fas fa-database text-primary-700 text-9xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                
+        <!-- SSS Bölümü -->
+        <section class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold text-primary mb-4">Sıkça Sorulan Sorular</h2>
+                        <p class="text-lg text-secondary-600">Hizmetlerimizle ilgili sık sorulan sorulara yanıtlarımız</p>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-lg shadow-sm p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-3">Cihazımı tamir için ortalama bekleme süresi ne kadar?</h3>
+                            <p class="text-secondary-600">Çoğu basit tamir işlemi (ekran değişimi, batarya değişimi vb.) aynı gün içerisinde tamamlanmaktadır. Anakart tamiri gibi daha karmaşık işlemler 1-3 gün sürebilir. Kesin süre, cihazınız incelendikten sonra size bildirilecektir.</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg shadow-sm p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-3">Tamir sonrası garanti süresi ne kadar?</h3>
+                            <p class="text-secondary-600">Tüm tamir işlemlerimiz için 6 ay servis garantisi sunuyoruz. Bu garanti, değiştirilen parçaları ve yapılan işçiliği kapsamaktadır. Herhangi bir sorunla karşılaşırsanız, garanti süresince ücretsiz olarak tekrar bakım yapıyoruz.</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg shadow-sm p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-3">Orijinal yedek parça kullandığınızı nasıl anlayabilirim?</h3>
+                            <p class="text-secondary-600">Tüm yedek parçalarımız orijinal üreticilerden temin edilmektedir ve bu parçaların seri numaralarını kayıt altına alıyoruz. Talep etmeniz durumunda, kullanılan parçanın orijinalliğini gösteren belgeleri sizinle paylaşabilir ve parça hakkında detaylı bilgi verebiliriz.</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg shadow-sm p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-3">Veri gizliliği konusunda ne gibi önlemler alıyorsunuz?</h3>
+                            <p class="text-secondary-600">TTS Bilişim olarak, müşterilerimizin veri gizliliğine büyük önem veriyoruz. Cihazlarınızdaki kişisel verilerinize tamamen saygılıyız ve hiçbir şekilde bu verilere erişim sağlamıyoruz. Tamir işlemlerinde gerekli olmadıkça cihazınızdaki dosyalara erişim talep etmiyoruz. Veri kurtarma işlemlerinde ise kurtarılan veriler şifrelenmiş ortamlarda saklanmaktadır.</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg shadow-sm p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-3">Ücretlendirme nasıl yapılıyor?</h3>
+                            <p class="text-secondary-600">Tüm tamir işlemlerinde öncelikle ücretsiz arıza tespit hizmeti sunuyoruz. Cihazınız incelendikten sonra, tamirin maliyeti hakkında size detaylı bilgi veriyoruz. Onayınız olmadan herhangi bir işlem yapmıyor ve ekstra ücret talep etmiyoruz. Tamir sürecinde beklenmedik bir durum ortaya çıkması halinde sizi bilgilendiriyoruz.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- İletişim CTA -->
+        <section class="py-16 bg-primary">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="flex flex-col lg:flex-row items-center justify-between">
+                        <div class="mb-6 lg:mb-0 text-center lg:text-left">
+                            <h2 class="text-3xl font-bold text-white mb-2">Cihazınız için teknik destek mi lazım?</h2>
+                            <p class="text-white text-opacity-90">Uzman ekibimiz tüm sorularınıza yanıt vermek ve cihazınıza yardımcı olmak için hazır.</p>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="iletisim.html" class="bg-white text-primary hover:bg-gray-100 px-6 py-3 rounded-md font-medium transition-colors text-center">İletişime Geçin</a>
+                            <a href="tel:+902165551234" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary px-6 py-3 rounded-md font-medium transition-colors flex items-center justify-center">
+                                <i class="fas fa-phone-alt mr-2"></i> Hemen Arayın
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-800 text-white pt-12 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- Firma Bilgileri -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 flex items-center">
+                        <span class="text-primary-300 text-2xl mr-2">TTS</span> Bilişim
+                    </h3>
+                    <p class="text-gray-300 mb-4">Profesyonel bilgisayar, telefon ve tablet teknik servis hizmetleri.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://facebook.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hızlı Bağlantılar -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-100">Hızlı Bağlantılar</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-primary-300 transition-colors">Ana Sayfa</a></li>
+                        <li><a href="hakkimizda.html" class="text-gray-300 hover:text-primary-300 transition-colors">Hakkımızda</a></li>
+                        <li><a href="hizmetlerimiz.html" class="text-gray-300 hover:text-primary-300 transition-colors">Hizmetlerimiz</a></li>
+                        <li><a href="yedek-parca.html" class="text-gray-300 hover:text-primary-300 transition-colors">Orijinal Yedek Parça</a></li>
+                        <li><a href="blog.html" class="text-gray-300 hover:text-primary-300 transition-colors">Blog</a></li>
+                        <li><a href="iletisim.html" class="text-gray-300 hover:text-primary-300 transition-colors">İletişim</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Hizmetler -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-100">Hizmetlerimiz</h4>
+                    <ul class="space-y-2">
+                        <li><a href="hizmetlerimiz.html#bilgisayar" class="text-gray-300 hover:text-primary-300 transition-colors">Bilgisayar Tamiri</a></li>
+                        <li><a href="hizmetlerimiz.html#telefon" class="text-gray-300 hover:text-primary-300 transition-colors">Telefon Tamiri</a></li>
+                        <li><a href="hizmetlerimiz.html#tablet" class="text-gray-300 hover:text-primary-300 transition-colors">Tablet Tamiri</a></li>
+                        <li><a href="hizmetlerimiz.html#anakart" class="text-gray-300 hover:text-primary-300 transition-colors">Anakart Tamiri</a></li>
+                        <li><a href="hizmetlerimiz.html#veri-kurtarma" class="text-gray-300 hover:text-primary-300 transition-colors">Veri Kurtarma</a></li>
+                        <li><a href="yedek-parca.html" class="text-gray-300 hover:text-primary-300 transition-colors">Orijinal Yedek Parça</a></li>
+                    </ul>
+                </div>
+                
+                <!-- İletişim Bilgileri -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-100">İletişim</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary-300"></i>
+                            <span>Sahrayıcedit mh. İnönü cd. Sinan sk. No:1a<br>Kadıköy, İstanbul</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-primary-300"></i>
+                            <span><a href="tel:+902165551234" class="hover:text-primary-300 transition-colors">0544 924 71 72 – 0216 302 10 10</a></span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary-300"></i>
+                            <span><a href="mailto:info@ttsbilisim.com" class="hover:text-primary-300 transition-colors">info@ttsbilisim.com</a></span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-3 text-primary-300"></i>
+                            <span>Pzt - Cmt: 09:00 - 19:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Google Maps -->
+            <div class="mb-8">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12046.171111851305!2d29.02699!3d40.988599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab8679bfb3d31%3A0x7d75715e081dfa5c!2sKad%C4%B1k%C3%B6y%2C%20%C4%B0stanbul!5e0!3m2!1str!2str!4v1651339764653!5m2!1str!2str" class="w-full h-64 rounded-lg" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            <div class="border-t border-gray-700 py-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">© 2025 TTS Bilişim. Tüm hakları saklıdır.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary-300 transition-colors">Gizlilik Politikası</a>
+                        <a href="#" class="text-gray-400 hover:text-primary-300 transition-colors">Kullanım Koşulları</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Sayfa içi bağlantılar için yumuşak geçiş
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const yOffset = -100; // Header yüksekliğine göre ayarlayın
+                    const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                    
+                    window.scrollTo({
+                        top: y,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
