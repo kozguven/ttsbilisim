@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategori Ürün Listesi - TTS Bilişim</title>
+    <meta name="description" content="TTS Bilişim kategorilerine göre filtrelenmiş ürün listesi. Telefon, bilgisayar, tablet ve diğer teknoloji ürünleri için kaliteli yedek parçalar.">
+    <meta name="keywords" content="kategori, ürün listesi, yedek parça kategorileri, TTS Bilişim">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'roboto': ['Roboto', 'sans-serif']
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: '#1a56db',
+                            50: '#f0f5ff',
+                            100: '#e0eaff',
+                            200: '#c7d7fe',
+                            300: '#a0b9fa',
+                            400: '#7590f5',
+                            500: '#4f67ed',
+                            600: '#3a48df',
+                            700: '#303ac7',
+                            800: '#2c31a1',
+                            900: '#2c3180'
+                        },
+                        secondary: {
+                            DEFAULT: '#4b5563',
+                            50: '#f8fafc',
+                            100: '#f0f5f9',
+                            200: '#e1e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+    <!-- Ultra Modern Header -->
+    <header class="relative bg-white/80 backdrop-blur-xl border-b border-gray-200/50 sticky top-0 z-50">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-50/30 via-white to-purple-50/30"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <a href="index.html" class="flex items-center">
+                        <img src="img/logo.png" alt="TTS Bilişim Logo" class="h-12 mr-2">
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="group relative p-3 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-gray-200/50 hover:border-blue-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <i class="fas fa-bars text-xl text-gray-700 group-hover:text-blue-600 transition-colors duration-300 relative z-10"></i>
+                    </button>
+                </div>
+                
+                <!-- Ultra Modern Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-2">
+                    <div class="flex items-center space-x-1 bg-white/60 backdrop-blur-sm border border-gray-200/50 rounded-2xl p-2 shadow-lg shadow-gray-200/50">
+                        <a href="index.html" class="group relative px-4 py-2.5 text-gray-700 font-medium rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-700">
+                            <span class="flex items-center">
+                                <i class="fas fa-home text-sm mr-2 text-blue-500"></i>
+                                Ana Sayfa
+                            </span>
+                        </a>
+                        
+                        <a href="hakkimizda.html" class="group relative px-4 py-2.5 text-gray-700 font-medium rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-emerald-50 hover:to-teal-50 hover:text-emerald-700">
+                            <span class="flex items-center">
+                                <i class="fas fa-info-circle text-sm mr-2 text-emerald-500"></i>
+                                Hakkımızda
+                            </span>
+                        </a>
+                        
+                        <a href="hizmetlerimiz.html" class="group relative px-4 py-2.5 text-gray-700 font-medium rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-purple-50 hover:to-indigo-50 hover:text-purple-700">
+                            <span class="flex items-center">
+                                <i class="fas fa-cogs text-sm mr-2 text-purple-500"></i>
+                                Hizmetlerimiz
+                            </span>
+                        </a>
+                        
+                        <a href="yedek-parca.html" class="group relative px-4 py-2.5 text-gray-700 font-medium rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-amber-50 hover:to-orange-50 hover:text-amber-700">
+                            <span class="flex items-center">
+                                <i class="fas fa-microchip text-sm mr-2 text-amber-500"></i>
+                                Yedek Parça
+                            </span>
+                        </a>
+                        
+                        <a href="blog.html" class="group relative px-4 py-2.5 text-gray-700 font-medium rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-50 hover:to-red-50 hover:text-orange-700">
+                            <span class="flex items-center">
+                                <i class="fas fa-blog text-sm mr-2 text-orange-500"></i>
+                                Blog
+                            </span>
+                        </a>
+                        
+                        <a href="iletisim.html" class="group relative px-4 py-2.5 text-gray-700 font-medium rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-violet-50 hover:to-fuchsia-50 hover:text-violet-700">
+                            <span class="flex items-center">
+                                <i class="fas fa-phone text-sm mr-2 text-violet-500"></i>
+                                İletişim
+                            </span>
+                        </a>
+                    </div>
+                    
+                    <!-- Emergency Contact Button -->
+                    <div class="ml-4">
+                        <a href="tel:+905449247172" class="group relative px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25 flex items-center">
+                            <span class="relative z-10 flex items-center">
+                                <i class="fas fa-phone-alt mr-2 group-hover:rotate-12 transition-transform duration-300"></i>
+                                <span class="hidden lg:inline">Acil Arama</span>
+                                <span class="lg:hidden">Ara</span>
+                            </span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-green-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        
+        <!-- Ultra Modern Mobile Navigation -->
+        <nav id="mobile-menu" class="hidden bg-white/95 backdrop-blur-lg border-t border-gray-200/50 md:hidden relative z-40">
+            <div class="container mx-auto px-4 py-6">
+                <div class="grid grid-cols-2 gap-3">
+                    <a href="index.html" class="group relative p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-gray-200/50 hover:border-blue-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-home text-2xl text-blue-500 mb-2 block"></i>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-blue-700">Ana Sayfa</span>
+                        </div>
+                    </a>
+                    
+                    <a href="hakkimizda.html" class="group relative p-4 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl border border-gray-200/50 hover:border-emerald-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-info-circle text-2xl text-emerald-500 mb-2 block"></i>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-emerald-700">Hakkımızda</span>
+                        </div>
+                    </a>
+                    
+                    <a href="hizmetlerimiz.html" class="group relative p-4 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl border border-gray-200/50 hover:border-purple-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-indigo-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-cogs text-2xl text-purple-500 mb-2 block"></i>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-purple-700">Hizmetlerimiz</span>
+                        </div>
+                    </a>
+                    
+                    <a href="yedek-parca.html" class="group relative p-4 bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl border border-gray-200/50 hover:border-amber-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-orange-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-microchip text-2xl text-amber-500 mb-2 block"></i>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-amber-700">Yedek Parça</span>
+                        </div>
+                    </a>
+                    
+                    <a href="blog.html" class="group relative p-4 bg-gradient-to-r from-orange-50 to-red-50 rounded-xl border border-gray-200/50 hover:border-orange-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-blog text-2xl text-orange-500 mb-2 block"></i>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-orange-700">Blog</span>
+                        </div>
+                    </a>
+                    
+                    <a href="iletisim.html" class="group relative p-4 bg-gradient-to-r from-violet-50 to-fuchsia-50 rounded-xl border border-gray-200/50 hover:border-violet-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-violet-500/10 to-fuchsia-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-phone text-2xl text-violet-500 mb-2 block"></i>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-violet-700">İletişim</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="mt-6 border-t border-gray-200/50 pt-6">
+                    <a href="tel:+905449247172" class="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold py-3 px-6 rounded-xl hover:scale-105 transition-all duration-300 flex items-center justify-center">
+                        <i class="fas fa-phone-alt mr-2"></i>
+                        Acil Arama
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Grid Background -->
+    <section class="relative bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 min-h-[60vh] flex items-center">
+        <!-- Animated Grid Background -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-600/90 via-purple-600/90 to-blue-800/90"></div>
+            <div class="absolute inset-0 opacity-20">
+                <div class="grid grid-cols-12 h-full">
+                    <div class="border-r border-white/20"></div>
+                    <div class="border-r border-white/20"></div>
+                    <div class="border-r border-white/20"></div>
+                    <div class="border-r border-white/20"></div>
+                    <div class="border-r border-white/20"></div>
+                    <div class="border-r border-white/20"></div>
+                    <div class="border-r border-white/20"></div>
+                    <div class="border-r border-white/20"></div>
+                    <div class="border-r border-white/20"></div>
+                    <div class="border-r border-white/20"></div>
+                    <div class="border-r border-white/20"></div>
+                    <div class="border-r border-white/20"></div>
+                </div>
+                <div class="absolute inset-0">
+                    <div class="grid grid-rows-12 h-full">
+                        <div class="border-b border-white/20"></div>
+                        <div class="border-b border-white/20"></div>
+                        <div class="border-b border-white/20"></div>
+                        <div class="border-b border-white/20"></div>
+                        <div class="border-b border-white/20"></div>
+                        <div class="border-b border-white/20"></div>
+                        <div class="border-b border-white/20"></div>
+                        <div class="border-b border-white/20"></div>
+                        <div class="border-b border-white/20"></div>
+                        <div class="border-b border-white/20"></div>
+                        <div class="border-b border-white/20"></div>
+                        <div class="border-b border-white/20"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8">
+                    <span id="category-badge" class="text-white/90 font-medium">Kategori Ürünleri</span>
+                </div>
+                
+                <h1 id="category-title" class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+                    Ürün Listesi
+                </h1>
+                
+                <p id="category-description" class="text-xl md:text-2xl text-white/80 mb-8 leading-relaxed">
+                    Seçilen kategori için kaliteli ve garantili ürünler
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="yedek-parca.html" class="group relative px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-xl hover:bg-white hover:text-gray-900 transition-all duration-300">
+                        <span class="flex items-center justify-center">
+                            <i class="fas fa-arrow-left mr-2 group-hover:-translate-x-1 transition-transform duration-300"></i>
+                            Kategorilere Dön
+                        </span>
+                    </a>
+                    
+                    <a href="iletisim.html" class="group relative px-8 py-4 bg-white text-gray-900 font-semibold rounded-xl hover:bg-gray-100 transition-all duration-300">
+                        <span class="flex items-center justify-center">
+                            <i class="fas fa-phone mr-2 group-hover:rotate-12 transition-transform duration-300"></i>
+                            İletişime Geç
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Product List Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <!-- Filter and Sort Bar -->
+            <div class="bg-white rounded-2xl shadow-lg p-6 mb-12">
+                <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+                    <div class="flex items-center space-x-4">
+                        <h2 class="text-2xl font-bold text-gray-900">Telefon Parçaları</h2>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">9 Ürün</span>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
+                        <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            <option>Fiyata Göre Sırala</option>
+                            <option>Artan Fiyat</option>
+                            <option>Azalan Fiyat</option>
+                            <option>En Yeni</option>
+                            <option>En Popüler</option>
+                        </select>
+                        
+                        <div class="flex border border-gray-300 rounded-lg overflow-hidden">
+                            <button id="grid-view" class="px-4 py-2 bg-blue-500 text-white hover:bg-blue-600 transition-colors duration-300">
+                                <i class="fas fa-th-large"></i>
+                            </button>
+                            <button id="list-view" class="px-4 py-2 bg-gray-100 text-gray-600 hover:bg-gray-200 transition-colors duration-300">
+                                <i class="fas fa-list"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Static Product Cards -->
+                <div class="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100">
+                    <!-- Product Image -->
+                    <div class="aspect-square bg-gradient-to-br from-blue-50 to-purple-50 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                            <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-10 h-10">
+                                    <path d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V22C17 22.55 16.55 23 16 23H8C7.45 23 7 22.55 7 22V20H9V18H7V6H9V4H7ZM9 2V4H15V2H9ZM9 20V22H15V20H9Z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Status Badge -->
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500/90 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
+                                Stokta
+                            </span>
+                        </div>
+                        <!-- Quick Action Button -->
+                        <div class="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-lg">
+                                <i class="fas fa-heart text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Info -->
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2">
+                            iPhone 14 Orijinal Ekran
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2">
+                            %100 orijinal OLED ekran, 12 ay garanti ile
+                        </p>
+                        
+                        <!-- Actions -->
+                        <div class="flex items-center justify-end">
+                            <a href="product-detail.html" class="group/btn px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-medium hover:shadow-lg hover:scale-105 transition-all duration-300">
+                                <span class="flex items-center">
+                                    Detay
+                                    <i class="fas fa-arrow-right text-sm ml-2 group-hover/btn:translate-x-1 transition-transform duration-300"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100">
+                    <div class="aspect-square bg-gradient-to-br from-blue-50 to-purple-50 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                            <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-10 h-10">
+                                    <path d="M15.67 4H14V2c0-.55-.45-1-1-1h-2c-.55 0-1 .45-1 1v2H8.33C7.6 4 7 4.6 7 5.33v11.33C7 17.4 7.6 18 8.33 18H9v2c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-2h.67c.73 0 1.33-.6 1.33-1.33V5.33C17 4.6 16.4 4 15.67 4z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500/90 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
+                                Stokta
+                            </span>
+                        </div>
+                        <div class="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-lg">
+                                <i class="fas fa-heart text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2">
+                            Samsung S23 Batarya
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2">
+                            3900mAh orijinal batarya, hızlı şarj destekli
+                        </p>
+                        
+                        <!-- Actions -->
+                        <div class="flex items-center justify-end">
+                            <a href="product-detail.html" class="group/btn px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-medium hover:shadow-lg hover:scale-105 transition-all duration-300">
+                                <span class="flex items-center">
+                                    Detay
+                                    <i class="fas fa-arrow-right text-sm ml-2 group-hover/btn:translate-x-1 transition-transform duration-300"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100">
+                    <div class="aspect-square bg-gradient-to-br from-blue-50 to-purple-50 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                            <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-10 h-10">
+                                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <path d="m12 1-3 6-6-3 3 6-6 3 6 3-3 6 6-3 3 6-3-6 6-3-6-3 3-6-6 3z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500/90 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
+                                Stokta
+                            </span>
+                        </div>
+                        <div class="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-lg">
+                                <i class="fas fa-heart text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2">
+                            iPhone 13 Kamera
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2">
+                            Arka kamera modülü, çift lens teknolojisi
+                        </p>
+                        
+                        <!-- Actions -->
+                        <div class="flex items-center justify-end">
+                            <a href="product-detail.html" class="group/btn px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-medium hover:shadow-lg hover:scale-105 transition-all duration-300">
+                                <span class="flex items-center">
+                                    Detay
+                                    <i class="fas fa-arrow-right text-sm ml-2 group-hover/btn:translate-x-1 transition-transform duration-300"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Remaining 6 Modern Product Cards -->
+                <div class="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100">
+                    <div class="aspect-square bg-gradient-to-br from-blue-50 to-purple-50 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                            <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-10 h-10">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500/90 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
+                                Stokta
+                            </span>
+                        </div>
+                        <div class="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-lg">
+                                <i class="fas fa-heart text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2">
+                            Huawei P30 Ekran
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2">
+                            AMOLED dokunmatik ekran, full assembly
+                        </p>
+                        
+                        <!-- Actions -->
+                        <div class="flex items-center justify-end">
+                            <a href="product-detail.html" class="group/btn px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-medium hover:shadow-lg hover:scale-105 transition-all duration-300">
+                                <span class="flex items-center">
+                                    Detay
+                                    <i class="fas fa-arrow-right text-sm ml-2 group-hover/btn:translate-x-1 transition-transform duration-300"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100">
+                    <div class="aspect-square bg-gradient-to-br from-blue-50 to-purple-50 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                            <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-10 h-10">
+                                    <path d="M15.67 4H14V2c0-.55-.45-1-1-1h-2c-.55 0-1 .45-1 1v2H8.33C7.6 4 7 4.6 7 5.33v11.33C7 17.4 7.6 18 8.33 18H9v2c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-2h.67c.73 0 1.33-.6 1.33-1.33V5.33C17 4.6 16.4 4 15.67 4z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500/90 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
+                                Stokta
+                            </span>
+                        </div>
+                        <div class="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-lg">
+                                <i class="fas fa-heart text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2">
+                            Xiaomi Mi 11 Batarya
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2">
+                            4600mAh hızlı şarj destekli batarya
+                        </p>
+                        
+                        <!-- Actions -->
+                        <div class="flex items-center justify-end">
+                            <a href="product-detail.html" class="group/btn px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-medium hover:shadow-lg hover:scale-105 transition-all duration-300">
+                                <span class="flex items-center">
+                                    Detay
+                                    <i class="fas fa-arrow-right text-sm ml-2 group-hover/btn:translate-x-1 transition-transform duration-300"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100">
+                    <div class="aspect-square bg-gradient-to-br from-blue-50 to-purple-50 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                            <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-10 h-10">
+                                    <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                                    <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" fill="none"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500/90 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
+                                Stokta
+                            </span>
+                        </div>
+                        <div class="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-lg">
+                                <i class="fas fa-heart text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2">
+                            OnePlus 9 Hoparlör
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2">
+                            Stereo hoparlör seti, yüksek kalite ses
+                        </p>
+                        
+                        <!-- Actions -->
+                        <div class="flex items-center justify-end">
+                            <a href="product-detail.html" class="group/btn px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-medium hover:shadow-lg hover:scale-105 transition-all duration-300">
+                                <span class="flex items-center">
+                                    Detay
+                                    <i class="fas fa-arrow-right text-sm ml-2 group-hover/btn:translate-x-1 transition-transform duration-300"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100">
+                    <div class="aspect-square bg-gradient-to-br from-blue-50 to-purple-50 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                            <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-10 h-10">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                                    <circle cx="12" cy="10" r="3" fill="currentColor" opacity="0.3"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-green-500/90 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
+                                Stokta
+                            </span>
+                        </div>
+                        <div class="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-lg">
+                                <i class="fas fa-heart text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2">
+                            Google Pixel 6 Ekran
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2">
+                            90Hz AMOLED ekran, premium kalite
+                        </p>
+                        
+                        <!-- Actions -->
+                        <div class="flex items-center justify-end">
+                            <a href="product-detail.html" class="group/btn px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-medium hover:shadow-lg hover:scale-105 transition-all duration-300">
+                                <span class="flex items-center">
+                                    Detay
+                                    <i class="fas fa-arrow-right text-sm ml-2 group-hover/btn:translate-x-1 transition-transform duration-300"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100">
+                    <div class="aspect-square bg-gradient-to-br from-blue-50 to-purple-50 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                            <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-10 h-10">
+                                    <path d="M15.5 1h-8v4.5l4 3 4-3z"/>
+                                    <path d="M12.5 8.5v7.5"/>
+                                    <path d="M8 18h8l-4 4-4-4z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-orange-500/90 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
+                                Sipariş Üzeri
+                            </span>
+                        </div>
+                        <div class="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button class="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-lg">
+                                <i class="fas fa-heart text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2">
+                            Samsung Note 20 Kalem
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2">
+                            S Pen stylus kalemi, orijinal Samsung
+                        </p>
+                        
+                        <!-- Actions -->
+                        <div class="flex items-center justify-end">
+                            <a href="product-detail.html" class="group/btn px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-medium hover:shadow-lg hover:scale-105 transition-all duration-300">
+                                <span class="flex items-center">
+                                    Detay
+                                    <i class="fas fa-arrow-right text-sm ml-2 group-hover/btn:translate-x-1 transition-transform duration-300"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category Information Section (Simple Content) -->
+            <div class="mt-20 max-w-4xl mx-auto">
+                <div class="bg-white rounded-3xl shadow-lg p-8 md:p-12 text-center">
+                    <div class="mb-8">
+                        <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-8 h-8">
+                                <path d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V22C17 22.55 16.55 23 16 23H8C7.45 23 7 22.55 7 22V20H9V18H7V6H9V4H7ZM9 2V4H15V2H9ZM9 20V22H15V20H9Z"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                            Telefon Parçaları Hakkında
+                        </h2>
+                    </div>
+                    
+                    <div class="prose prose-lg max-w-none text-gray-600 leading-relaxed">
+                        <p class="text-lg mb-6">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                        
+                        <p class="text-lg">
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-16">
+                <nav class="flex items-center space-x-2">
+                    <button class="px-4 py-2 text-gray-400 bg-white border border-gray-300 rounded-lg cursor-not-allowed" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="px-4 py-2 text-white bg-blue-500 border border-blue-500 rounded-lg">1</button>
+                    <button class="px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50">2</button>
+                    <button class="px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50">3</button>
+                    <button class="px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                Aradığınız Ürünü Bulamadınız mı?
+            </h2>
+            <p class="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+                Özel ürün talebinizi bize iletin, size en uygun çözümü bulalım
+            </p>
+            <a href="iletisim.html" class="group inline-flex items-center bg-white text-gray-900 font-semibold px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300">
+                <i class="fas fa-envelope mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                Özel Talep Gönder
+            </a>
+        </div>
+    </section>
+
+    <!-- Ultra Modern Footer -->
+    <footer class="relative bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-20 w-64 h-64 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-full blur-3xl"></div>
+            
+            <!-- Tech pattern overlay -->
+            <div class="absolute inset-0 opacity-5">
+                <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="techPattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+                            <circle cx="30" cy="30" r="2" fill="currentColor"/>
+                            <path d="M30 10v20m-20 0h20m20 0v20m0-20h-20" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#techPattern)"/>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Main Footer Content -->
+            <div class="pt-16 pb-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                    <!-- Company Info -->
+                    <div class="lg:col-span-1">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-4 flex items-center">
+                                <span class="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent text-3xl mr-3">TTS</span> 
+                                <span class="text-white">Bilişim</span>
+                            </h3>
+                            <p class="text-gray-300 mb-6 leading-relaxed">
+                                Profesyonel bilgisayar, telefon ve tablet teknik servis hizmetleri. 
+                                <span class="text-blue-400 font-semibold">En kaliteli</span> orijinal yedek parçalar.
+                            </p>
+                        </div>
+                        
+                        <!-- Social Media -->
+                        <div class="flex space-x-4">
+                            <a href="https://facebook.com" target="_blank" class="group w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                <i class="fab fa-facebook-f text-white group-hover:text-blue-200"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="group w-10 h-10 bg-gradient-to-r from-cyan-600 to-cyan-700 rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                <i class="fab fa-twitter text-white group-hover:text-cyan-200"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="group w-10 h-10 bg-gradient-to-r from-pink-600 to-rose-700 rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                <i class="fab fa-instagram text-white group-hover:text-pink-200"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="group w-10 h-10 bg-gradient-to-r from-blue-700 to-indigo-700 rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                <i class="fab fa-linkedin-in text-white group-hover:text-blue-200"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-6 text-white relative">
+                            Hızlı Bağlantılar
+                            <div class="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></div>
+                        </h4>
+                        <ul class="space-y-3">
+                            <li><a href="index.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Ana Sayfa
+                            </a></li>
+                            <li><a href="hakkimizda.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Hakkımızda
+                            </a></li>
+                            <li><a href="hizmetlerimiz.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Hizmetlerimiz
+                            </a></li>
+                            <li><a href="yedek-parca.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Orijinal Yedek Parça
+                            </a></li>
+                            <li><a href="blog.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Blog
+                            </a></li>
+                            <li><a href="iletisim.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                İletişim
+                            </a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Services -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-6 text-white relative">
+                            Hizmetlerimiz
+                            <div class="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full"></div>
+                        </h4>
+                        <ul class="space-y-3">
+                            <li><a href="hizmetlerimiz.html#bilgisayar" class="text-gray-300 hover:text-purple-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Bilgisayar Tamiri
+                            </a></li>
+                            <li><a href="hizmetlerimiz.html#telefon" class="text-gray-300 hover:text-purple-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Telefon Tamiri
+                            </a></li>
+                            <li><a href="hizmetlerimiz.html#tablet" class="text-gray-300 hover:text-purple-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Tablet Tamiri
+                            </a></li>
+                            <li><a href="hizmetlerimiz.html#anakart" class="text-gray-300 hover:text-purple-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Anakart Tamiri
+                            </a></li>
+                            <li><a href="hizmetlerimiz.html#veri-kurtarma" class="text-gray-300 hover:text-purple-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Veri Kurtarma
+                            </a></li>
+                            <li><a href="yedek-parca.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Orijinal Yedek Parça
+                            </a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-6 text-white relative">
+                            İletişim Bilgileri
+                            <div class="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-green-500 to-cyan-600 rounded-full"></div>
+                        </h4>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start group">
+                                <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-white text-sm"></i>
+                                </div>
+                                <span class="group-hover:text-blue-400 transition-colors duration-300">
+                                    Sahrayıcedit mh. İnönü cd. Sinan sk. No:1a<br>Kadıköy, İstanbul
+                                </span>
+                            </li>
+                            <li class="flex items-center group">
+                                <div class="w-8 h-8 bg-gradient-to-r from-green-500 to-cyan-600 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-phone-alt text-white text-sm"></i>
+                                </div>
+                                <div class="space-y-1">
+                                    <div><a href="tel:+905449247172" class="hover:text-green-400 transition-colors duration-300">0544 924 71 72</a></div>
+                                    <div><a href="tel:+902163021010" class="hover:text-green-400 transition-colors duration-300">0216 302 10 10</a></div>
+                                </div>
+                            </li>
+                            <li class="flex items-center group">
+                                <div class="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-envelope text-white text-sm"></i>
+                                </div>
+                                <span><a href="mailto:info@ttsbilisim.com" class="hover:text-purple-400 transition-colors duration-300">info@ttsbilisim.com</a></span>
+                            </li>
+                            <li class="flex items-center group">
+                                <div class="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-clock text-white text-sm"></i>
+                                </div>
+                                <span class="group-hover:text-orange-400 transition-colors duration-300">Pzt - Cmt: 09:00 - 19:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Google Maps -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm border border-white/10 rounded-2xl p-2">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3012.088095865558!2d29.080603890702548!3d40.979551747342796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac7b6b9aec73f%3A0xfabad29babb99d9d!2zU2FocmF5xLEgQ2VkaXQsIFNpbmFuIFNva2HEn8SxIE5vOjEsIDM0NzM0IEthZMSxa8O2eS_EsHN0YW5idWw!5e0!3m2!1str!2str!4v1748375602677!5m2!1str!2str" class="w-full h-64 rounded-2xl shadow-2xl" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-700/50 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-gray-400 flex items-center">
+                            <span class="mr-2">© 2025</span>
+                            <span class="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent font-semibold">TTS Bilişim</span>
+                            <span class="ml-2">. Tüm hakları saklıdır.</span>
+                        </p>
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm">Gizlilik Politikası</a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm">Kullanım Koşulları</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        /*
+         * TTS BİLİŞİM - KATEGORİ LİSTESİ STATIK TEMPLATE SİSTEMİ
+         * ======================================================
+         * 
+         * Bu sayfa tamamen statik template sistemidir.
+         * Dinamik içerik yoktur, tüm ürünler HTML'de tanımlanmıştır.
+         * 
+         * Bu sayfayı farklı kategoriler için kopyalayıp düzenleyebilirsiniz.
+         * Sadece kategori başlığını, açıklamasını ve ürünleri değiştirin.
+         */
+
+        // View toggle functionality - Grid/List görünümü
+        function setupViewToggle() {
+            const gridView = document.getElementById('grid-view');
+            const listView = document.getElementById('list-view');
+            const productsGrid = document.getElementById('products-grid');
+            
+            if (gridView && listView && productsGrid) {
+                gridView.addEventListener('click', () => {
+                    gridView.classList.add('bg-blue-500', 'text-white');
+                    gridView.classList.remove('bg-gray-100', 'text-gray-600');
+                    listView.classList.add('bg-gray-100', 'text-gray-600');
+                    listView.classList.remove('bg-blue-500', 'text-white');
+                    
+                    productsGrid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8';
+                });
+                
+                listView.addEventListener('click', () => {
+                    listView.classList.add('bg-blue-500', 'text-white');
+                    listView.classList.remove('bg-gray-100', 'text-gray-600');
+                    gridView.classList.add('bg-gray-100', 'text-gray-600');
+                    gridView.classList.remove('bg-blue-500', 'text-white');
+                    
+                    productsGrid.className = 'grid grid-cols-1 gap-6';
+                });
+            }
+        }
+
+        // Mobile menu toggle
+        function setupMobileMenu() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            setupViewToggle();
+            setupMobileMenu();
+        });
+    </script>
+</body>
+</html>
