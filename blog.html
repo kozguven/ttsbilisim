@@ -67,253 +67,567 @@
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
-    <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4">
+    <!-- Ultra Modern Header -->
+    <header class="relative bg-white/80 backdrop-blur-xl border-b border-gray-200/50 sticky top-0 z-50">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 bg-gradient-to-r from-orange-50/30 via-white to-red-50/30"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
             <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
                 <div class="flex items-center space-x-2">
                     <a href="index.html" class="flex items-center">
                         <img src="img/logo.png" alt="TTS Bilişim Logo" class="h-12 mr-2">
-                        
                     </a>
                 </div>
                 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-500 hover:text-primary focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
+                    <button id="mobile-menu-button" class="group relative p-3 bg-gradient-to-r from-orange-50 to-red-50 rounded-xl border border-gray-200/50 hover:border-orange-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <i class="fas fa-bars text-xl text-gray-700 group-hover:text-orange-600 transition-colors duration-300 relative z-10"></i>
                     </button>
                 </div>
                 
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex space-x-6">
-                    <a href="index.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Ana Sayfa</a>
-                    <a href="hakkimizda.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Hakkımızda</a>
-                    <a href="hizmetlerimiz.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Hizmetlerimiz</a>
-                    <a href="yedek-parca.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Orijinal Yedek Parça</a>
-                    <a href="blog.html" class="text-primary font-medium hover:text-primary-700 transition-colors">Blog</a>
-                    <a href="iletisim.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">İletişim</a>
+                <!-- Ultra Modern Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-2">
+                    <div class="flex items-center space-x-1 bg-white/60 backdrop-blur-sm border border-gray-200/50 rounded-2xl p-2 shadow-lg shadow-gray-200/50">
+                        <a href="index.html" class="group relative px-4 py-2.5 text-gray-700 font-medium rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-700">
+                            <span class="flex items-center">
+                                <i class="fas fa-home text-sm mr-2 text-blue-500"></i>
+                                Ana Sayfa
+                            </span>
+                        </a>
+                        
+                        <a href="hakkimizda.html" class="group relative px-4 py-2.5 text-gray-700 font-medium rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-emerald-50 hover:to-teal-50 hover:text-emerald-700">
+                            <span class="flex items-center">
+                                <i class="fas fa-info-circle text-sm mr-2 text-emerald-500"></i>
+                                Hakkımızda
+                            </span>
+                        </a>
+                        
+                        <a href="hizmetlerimiz.html" class="group relative px-4 py-2.5 text-gray-700 font-medium rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-purple-50 hover:to-indigo-50 hover:text-purple-700">
+                            <span class="flex items-center">
+                                <i class="fas fa-cogs text-sm mr-2 text-purple-500"></i>
+                                Hizmetlerimiz
+                            </span>
+                        </a>
+                        
+                        <a href="yedek-parca.html" class="group relative px-4 py-2.5 text-gray-700 font-medium rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-amber-50 hover:to-orange-50 hover:text-amber-700">
+                            <span class="flex items-center">
+                                <i class="fas fa-microchip text-sm mr-2 text-amber-500"></i>
+                                Yedek Parça
+                            </span>
+                        </a>
+                        
+                        <a href="blog.html" class="group relative px-4 py-2.5 bg-gradient-to-r from-orange-500 to-red-600 text-white font-medium rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25">
+                            <span class="relative z-10 flex items-center">
+                                <i class="fas fa-blog text-sm mr-2"></i>
+                                Blog
+                            </span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                        
+                        <a href="iletisim.html" class="group relative px-4 py-2.5 text-gray-700 font-medium rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-violet-50 hover:to-fuchsia-50 hover:text-violet-700">
+                            <span class="flex items-center">
+                                <i class="fas fa-phone text-sm mr-2 text-violet-500"></i>
+                                İletişim
+                            </span>
+                        </a>
+                    </div>
+                    
+                    <!-- Emergency Contact Button -->
+                    <div class="ml-4">
+                        <a href="tel:+905449247172" class="group relative px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25 flex items-center">
+                            <span class="relative z-10 flex items-center">
+                                <i class="fas fa-phone-alt mr-2 group-hover:rotate-12 transition-transform duration-300"></i>
+                                <span class="hidden lg:inline">Acil Arama</span>
+                                <span class="lg:hidden">Ara</span>
+                            </span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-green-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                    </div>
                 </nav>
             </div>
         </div>
         
-        <!-- Mobile Navigation -->
-        <nav id="mobile-menu" class="hidden bg-white px-4 py-3 md:hidden border-t border-gray-200">
-            <div class="flex flex-col space-y-3">
-                <a href="index.html" class="text-secondary-600 font-medium py-2">Ana Sayfa</a>
-                <a href="hakkimizda.html" class="text-secondary-600 font-medium py-2">Hakkımızda</a>
-                <a href="hizmetlerimiz.html" class="text-secondary-600 font-medium py-2">Hizmetlerimiz</a>
-                <a href="yedek-parca.html" class="text-secondary-600 font-medium py-2">Orijinal Yedek Parça</a>
-                <a href="blog.html" class="text-primary font-medium py-2">Blog</a>
-                <a href="iletisim.html" class="text-secondary-600 font-medium py-2">İletişim</a>
+        <!-- Ultra Modern Mobile Navigation -->
+        <nav id="mobile-menu" class="hidden bg-white/95 backdrop-blur-lg border-t border-gray-200/50 md:hidden relative z-40">
+            <div class="container mx-auto px-4 py-6">
+                <div class="grid grid-cols-2 gap-3">
+                    <a href="index.html" class="group relative p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-gray-200/50 hover:border-blue-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-home text-2xl text-blue-500 mb-2 block"></i>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-blue-700">Ana Sayfa</span>
+                        </div>
+                    </a>
+                    
+                    <a href="hakkimizda.html" class="group relative p-4 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl border border-gray-200/50 hover:border-emerald-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-info-circle text-2xl text-emerald-500 mb-2 block"></i>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-emerald-700">Hakkımızda</span>
+                        </div>
+                    </a>
+                    
+                    <a href="hizmetlerimiz.html" class="group relative p-4 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl border border-gray-200/50 hover:border-purple-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-indigo-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-cogs text-2xl text-purple-500 mb-2 block"></i>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-purple-700">Hizmetlerimiz</span>
+                        </div>
+                    </a>
+                    
+                    <a href="yedek-parca.html" class="group relative p-4 bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl border border-gray-200/50 hover:border-amber-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-orange-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-microchip text-2xl text-amber-500 mb-2 block"></i>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-amber-700">Yedek Parça</span>
+                        </div>
+                    </a>
+                    
+                    <a href="blog.html" class="group relative p-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl border border-orange-300/50 transition-all duration-300">
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-blog text-2xl text-white mb-2 block"></i>
+                            <span class="text-sm font-medium text-white">Blog</span>
+                        </div>
+                    </a>
+                    
+                    <a href="iletisim.html" class="group relative p-4 bg-gradient-to-r from-violet-50 to-fuchsia-50 rounded-xl border border-gray-200/50 hover:border-violet-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-violet-500/10 to-fuchsia-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-phone text-2xl text-violet-500 mb-2 block"></i>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-violet-700">İletişim</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Emergency Call Button -->
+                <div class="mt-6">
+                    <a href="tel:+905449247172" class="w-full flex items-center justify-center p-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-emerald-500 hover:to-green-600 transition-all duration-300">
+                        <i class="fas fa-phone-alt mr-3 text-lg"></i>
+                        <span>Acil Arama - 0544 924 71 72</span>
+                    </a>
+                </div>
             </div>
         </nav>
     </header>
 
     <main>
-        <!-- Sayfa Başlığı -->
-        <section class="bg-primary-700 text-white py-16">
-            <div class="container mx-auto px-4">
-                <div class="max-w-3xl mx-auto text-center">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Blog</h1>
-                    <p class="text-lg text-white opacity-90">Teknoloji dünyasındaki gelişmeler, cihaz bakım ipuçları ve teknik servis bilgilerine dair güncel yazılarımız</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Blog Post Arama ve Filtreler -->
-        <section class="py-8 bg-white border-b">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-wrap items-center justify-between">
-                    <div class="w-full md:w-auto mb-4 md:mb-0">
-                        <form class="flex">
-                            <input type="text" placeholder="Blog yazılarında ara..." class="p-3 border border-gray-300 rounded-l-md w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-                            <button type="submit" class="bg-primary text-white px-4 rounded-r-md hover:bg-primary-700 transition-colors">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </form>
-                    </div>
-                    <div class="w-full md:w-auto flex flex-wrap gap-2">
-                        <span class="text-secondary-600 self-center mr-2">Kategoriler:</span>
-                        <a href="#" class="bg-primary-50 text-primary px-3 py-1 rounded-full text-sm hover:bg-primary-100 transition-colors">Tümü</a>
-                        <a href="#" class="bg-gray-100 text-secondary-600 px-3 py-1 rounded-full text-sm hover:bg-primary-50 hover:text-primary transition-colors">Teknoloji</a>
-                        <a href="#" class="bg-gray-100 text-secondary-600 px-3 py-1 rounded-full text-sm hover:bg-primary-50 hover:text-primary transition-colors">Bakım & Onarım</a>
-                        <a href="#" class="bg-gray-100 text-secondary-600 px-3 py-1 rounded-full text-sm hover:bg-primary-50 hover:text-primary transition-colors">İpuçları</a>
-                        <a href="#" class="bg-gray-100 text-secondary-600 px-3 py-1 rounded-full text-sm hover:bg-primary-50 hover:text-primary transition-colors">Haberler</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Blog Yazıları -->
-        <section class="py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Blog Post 1 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2 duration-300">
-                        <div class="h-48 overflow-hidden">
-                            <img src="img/blog/blog-1.jpg" alt="Akıllı Telefonunuzun Ömrünü Nasıl Uzatabilirsiniz?" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <span class="bg-primary-50 text-primary text-xs px-2 py-1 rounded-full">Bakım & Onarım</span>
-                                <span class="text-secondary-400 text-sm ml-auto">25 Mayıs 2025</span>
-                            </div>
-                            <h2 class="text-xl font-semibold text-primary mb-2">Akıllı Telefonunuzun Ömrünü Nasıl Uzatabilirsiniz?</h2>
-                            <p class="text-secondary-600 mb-4">Telefonunuzun ömrünü uzatacak bakım ipuçları, batarya sağlığını koruma ve en sık karşılaşılan sorunları önleme yöntemleri...</p>
-                            <a href="#" class="text-primary hover:underline font-medium inline-flex items-center">
-                                Devamını Oku <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Blog Post 2 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2 duration-300">
-                        <div class="h-48 overflow-hidden">
-                            <img src="img/blog/blog-2.jpg" alt="2025 Yılının En İyi Dizüstü Bilgisayarları" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <span class="bg-primary-50 text-primary text-xs px-2 py-1 rounded-full">Teknoloji</span>
-                                <span class="text-secondary-400 text-sm ml-auto">18 Mayıs 2025</span>
-                            </div>
-                            <h2 class="text-xl font-semibold text-primary mb-2">2025 Yılının En İyi Dizüstü Bilgisayarları</h2>
-                            <p class="text-secondary-600 mb-4">Bu yılın en yeni laptop modellerini inceledik. Fiyat performans karşılaştırmaları ve hangi kullanıcı tipine hangi model daha uygun...</p>
-                            <a href="#" class="text-primary hover:underline font-medium inline-flex items-center">
-                                Devamını Oku <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Blog Post 3 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2 duration-300">
-                        <div class="h-48 bg-primary-100 flex items-center justify-center">
-                            <i class="fas fa-shield-alt text-primary-700 text-6xl"></i>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <span class="bg-primary-50 text-primary text-xs px-2 py-1 rounded-full">İpuçları</span>
-                                <span class="text-secondary-400 text-sm ml-auto">12 Mayıs 2025</span>
-                            </div>
-                            <h2 class="text-xl font-semibold text-primary mb-2">Verilerinizi Nasıl Güvende Tutabilirsiniz?</h2>
-                            <p class="text-secondary-600 mb-4">Önemli verilerinizi kaybetmemek için düzenli yedekleme nasıl yapılır? Hangi depolama çözümleri güvenli ve etkili?</p>
-                            <a href="#" class="text-primary hover:underline font-medium inline-flex items-center">
-                                Devamını Oku <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Blog Post 4 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2 duration-300">
-                        <div class="h-48 bg-primary-100 flex items-center justify-center">
-                            <i class="fas fa-microchip text-primary-700 text-6xl"></i>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <span class="bg-primary-50 text-primary text-xs px-2 py-1 rounded-full">Teknoloji</span>
-                                <span class="text-secondary-400 text-sm ml-auto">5 Mayıs 2025</span>
-                            </div>
-                            <h2 class="text-xl font-semibold text-primary mb-2">SSD mi HDD mi? Doğru Depolama Seçimi</h2>
-                            <p class="text-secondary-600 mb-4">Bilgisayarınız için doğru depolama çözümünü seçerken bilmeniz gerekenler, performans karşılaştırmaları ve fiyat analizleri...</p>
-                            <a href="#" class="text-primary hover:underline font-medium inline-flex items-center">
-                                Devamını Oku <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Blog Post 5 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2 duration-300">
-                        <div class="h-48 bg-primary-100 flex items-center justify-center">
-                            <i class="fas fa-battery-full text-primary-700 text-6xl"></i>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <span class="bg-primary-50 text-primary text-xs px-2 py-1 rounded-full">Bakım & Onarım</span>
-                                <span class="text-secondary-400 text-sm ml-auto">28 Nisan 2025</span>
-                            </div>
-                            <h2 class="text-xl font-semibold text-primary mb-2">Telefonunuzun Batarya Ömrünü Uzatmanın 10 Yolu</h2>
-                            <p class="text-secondary-600 mb-4">Batarya ömrünü kısaltan alışkanlıklar ve bataryanızdan maksimum verim almak için yapmanız gerekenler...</p>
-                            <a href="#" class="text-primary hover:underline font-medium inline-flex items-center">
-                                Devamını Oku <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Blog Post 6 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2 duration-300">
-                        <div class="h-48 bg-primary-100 flex items-center justify-center">
-                            <i class="fas fa-tablet-alt text-primary-700 text-6xl"></i>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <span class="bg-primary-50 text-primary text-xs px-2 py-1 rounded-full">Haberler</span>
-                                <span class="text-secondary-400 text-sm ml-auto">20 Nisan 2025</span>
-                            </div>
-                            <h2 class="text-xl font-semibold text-primary mb-2">Yeni iPad Pro: Dizüstü Bilgisayarlara Rakip Mi?</h2>
-                            <p class="text-secondary-600 mb-4">Apple'ın son çıkardığı iPad Pro modelinin detaylı incelemesi ve bir laptop yerine kullanılıp kullanılamayacağı analizi...</p>
-                            <a href="#" class="text-primary hover:underline font-medium inline-flex items-center">
-                                Devamını Oku <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Blog Post 7 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2 duration-300">
-                        <div class="h-48 bg-primary-100 flex items-center justify-center">
-                            <i class="fas fa-virus-slash text-primary-700 text-6xl"></i>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <span class="bg-primary-50 text-primary text-xs px-2 py-1 rounded-full">İpuçları</span>
-                                <span class="text-secondary-400 text-sm ml-auto">15 Nisan 2025</span>
-                            </div>
-                            <h2 class="text-xl font-semibold text-primary mb-2">Bilgisayarınızı Virüslerden Nasıl Korursunuz?</h2>
-                            <p class="text-secondary-600 mb-4">En iyi antivirüs programları, güvenlik önlemleri ve kötü amaçlı yazılımlara karşı alınabilecek önlemler...</p>
-                            <a href="#" class="text-primary hover:underline font-medium inline-flex items-center">
-                                Devamını Oku <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Blog Post 8 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2 duration-300">
-                        <div class="h-48 bg-primary-100 flex items-center justify-center">
-                            <i class="fas fa-tachometer-alt text-primary-700 text-6xl"></i>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <span class="bg-primary-50 text-primary text-xs px-2 py-1 rounded-full">İpuçları</span>
-                                <span class="text-secondary-400 text-sm ml-auto">8 Nisan 2025</span>
-                            </div>
-                            <h2 class="text-xl font-semibold text-primary mb-2">Bilgisayarınızı Nasıl Hızlandırabilirsiniz?</h2>
-                            <p class="text-secondary-600 mb-4">Yavaş çalışan bilgisayarınızın performansını artırmak için pratik ipuçları ve donanım yükseltme tavsiyeleri...</p>
-                            <a href="#" class="text-primary hover:underline font-medium inline-flex items-center">
-                                Devamını Oku <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Blog Post 9 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:-translate-y-2 duration-300">
-                        <div class="h-48 bg-primary-100 flex items-center justify-center">
-                            <i class="fas fa-camera text-primary-700 text-6xl"></i>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex items-center mb-3">
-                                <span class="bg-primary-50 text-primary text-xs px-2 py-1 rounded-full">Haberler</span>
-                                <span class="text-secondary-400 text-sm ml-auto">1 Nisan 2025</span>
-                            </div>
-                            <h2 class="text-xl font-semibold text-primary mb-2">2025'in En İyi Kameralı Telefonları</h2>
-                            <p class="text-secondary-600 mb-4">Bu yılın en etkileyici kamera performansına sahip akıllı telefonları ve detaylı karşılaştırma testleri...</p>
-                            <a href="#" class="text-primary hover:underline font-medium inline-flex items-center">
-                                Devamını Oku <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                            </a>
-                        </div>
+        <!-- Ultra Modern Hero Section -->
+        <section class="relative min-h-[70vh] bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 overflow-hidden">
+            <!-- Dynamic Background -->
+            <div class="absolute inset-0">
+                <!-- Grid Pattern -->
+                <div class="absolute inset-0 opacity-20">
+                    <div class="grid grid-cols-12 h-full">
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
                     </div>
                 </div>
                 
-                <!-- Sayfalama -->
+                <!-- Animated Gradient Mesh -->
+                <div class="absolute inset-0 bg-gradient-to-r from-orange-600/20 via-red-600/20 to-pink-600/20 animate-pulse"></div>
+                
+                <!-- Floating Geometric Shapes -->
+                <div class="absolute top-20 left-20 w-64 h-64 bg-gradient-to-r from-orange-400 to-red-500 rounded-full opacity-20 animate-pulse blur-xl"></div>
+                <div class="absolute bottom-32 right-32 w-96 h-96 bg-gradient-to-r from-red-400 to-pink-500 rounded-full opacity-15 animate-pulse blur-2xl"></div>
+                
+                <!-- Tech Pattern Overlay -->
+                <div class="absolute inset-0 opacity-10">
+                    <svg class="w-full h-full" viewBox="0 0 400 400" fill="none">
+                        <circle cx="50" cy="50" r="2" fill="currentColor" opacity="0.5"/>
+                        <circle cx="150" cy="50" r="2" fill="currentColor" opacity="0.3"/>
+                        <circle cx="250" cy="50" r="2" fill="currentColor" opacity="0.7"/>
+                        <circle cx="350" cy="50" r="2" fill="currentColor" opacity="0.4"/>
+                        <circle cx="50" cy="150" r="2" fill="currentColor" opacity="0.6"/>
+                        <circle cx="150" cy="150" r="2" fill="currentColor" opacity="0.8"/>
+                        <circle cx="250" cy="150" r="2" fill="currentColor" opacity="0.3"/>
+                        <circle cx="350" cy="150" r="2" fill="currentColor" opacity="0.5"/>
+                        <circle cx="50" cy="250" r="2" fill="currentColor" opacity="0.4"/>
+                        <circle cx="150" cy="250" r="2" fill="currentColor" opacity="0.7"/>
+                        <circle cx="250" cy="250" r="2" fill="currentColor" opacity="0.6"/>
+                        <circle cx="350" cy="250" r="2" fill="currentColor" opacity="0.3"/>
+                        <circle cx="50" cy="350" r="2" fill="currentColor" opacity="0.5"/>
+                        <circle cx="150" cy="350" r="2" fill="currentColor" opacity="0.4"/>
+                        <circle cx="250" cy="350" r="2" fill="currentColor" opacity="0.8"/>
+                        <circle cx="350" cy="350" r="2" fill="currentColor" opacity="0.6"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <!-- Hero Content -->
+            <div class="relative z-10 container mx-auto px-4 pt-20 pb-16">
+                <div class="max-w-4xl mx-auto text-center">
+                    <!-- Badge -->
+                    <div class="inline-flex items-center px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
+                        <svg class="w-5 h-5 mr-2 text-cyan-300" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span class="text-white font-medium">Teknoloji & İnovasyon Blog</span>
+                    </div>
+                    
+                    <!-- Main Title -->
+                    <h1 class="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+                        <span class="bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
+                            Blog &
+                        </span>
+                        <br>
+                        <span class="text-white">Makaleler</span>
+                    </h1>
+                    
+                    <!-- Subtitle -->
+                    <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+                        Teknoloji dünyasındaki son gelişmeler, uzman ipuçları ve 
+                        <span class="text-cyan-300 font-semibold">teknik servis bilgileri</span> 
+                        bir arada
+                    </p>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="#posts" class="group bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
+                            <span class="flex items-center">
+                                Blog Yazılarını Keşfet
+                                <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </span>
+                        </a>
+                        <a href="#categories" class="group bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg border border-white/20 transition-all duration-300 hover:bg-white/20">
+                            <span class="flex items-center">
+                                Kategoriler
+                                <svg class="ml-2 w-5 h-5 group-hover:rotate-45 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modern Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white">
+                <div class="flex flex-col items-center">
+                    <span class="text-sm mb-2 opacity-70">Scroll</span>
+                    <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+                        <div class="w-1 h-3 bg-white rounded-full mt-2 animate-bounce"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Ultra Modern Search & Filter Section -->
+        <section id="categories" class="relative py-16 bg-gradient-to-br from-white via-blue-50 to-purple-50 overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute inset-0">
+                <div class="absolute top-10 right-20 w-72 h-72 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-10 left-20 w-96 h-96 bg-gradient-to-r from-purple-400/10 to-cyan-400/10 rounded-full blur-3xl"></div>
+            </div>
+            
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-6xl mx-auto">
+                    <!-- Search Bar -->
+                    <div class="flex flex-col lg:flex-row items-center justify-between gap-8 mb-12">
+                        <div class="w-full lg:w-2/3">
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-6 flex items-center pointer-events-none">
+                                    <svg class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                    </svg>
+                                </div>
+                                <input type="text" placeholder="Blog yazılarında ara..." class="w-full pl-14 pr-6 py-5 text-lg border-2 border-gray-200 rounded-2xl focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 bg-white/70 backdrop-blur-sm">
+                                <button class="absolute inset-y-0 right-0 flex items-center pr-4">
+                                    <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold hover:scale-105 transition-all duration-300">
+                                        Ara
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Sort Options -->
+                        <div class="flex items-center gap-4">
+                            <span class="text-gray-600 font-medium">Sıralama:</span>
+                            <select class="bg-white/70 backdrop-blur-sm border-2 border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300">
+                                <option>En Yeni</option>
+                                <option>En Popüler</option>
+                                <option>A-Z</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Category Filter Pills -->
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <div class="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 cursor-pointer">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                            </svg>
+                            Tümü
+                        </div>
+                        <div class="inline-flex items-center px-6 py-3 rounded-full bg-white/70 backdrop-blur-sm text-gray-700 font-semibold border-2 border-gray-200 shadow-lg transform hover:scale-105 hover:bg-blue-50 hover:border-blue-300 transition-all duration-300 cursor-pointer">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                            </svg>
+                            Teknoloji
+                        </div>
+                        <div class="inline-flex items-center px-6 py-3 rounded-full bg-white/70 backdrop-blur-sm text-gray-700 font-semibold border-2 border-gray-200 shadow-lg transform hover:scale-105 hover:bg-green-50 hover:border-green-300 transition-all duration-300 cursor-pointer">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+                            </svg>
+                            Bakım & Onarım
+                        </div>
+                        <div class="inline-flex items-center px-6 py-3 rounded-full bg-white/70 backdrop-blur-sm text-gray-700 font-semibold border-2 border-gray-200 shadow-lg transform hover:scale-105 hover:bg-yellow-50 hover:border-yellow-300 transition-all duration-300 cursor-pointer">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                            </svg>
+                            İpuçları
+                        </div>
+                        <div class="inline-flex items-center px-6 py-3 rounded-full bg-white/70 backdrop-blur-sm text-gray-700 font-semibold border-2 border-gray-200 shadow-lg transform hover:scale-105 hover:bg-red-50 hover:border-red-300 transition-all duration-300 cursor-pointer">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                            </svg>
+                            Haberler
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Ultra Modern Blog Posts Section -->
+        <section id="posts" class="relative py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute inset-0">
+                <div class="absolute top-32 right-32 w-96 h-96 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-32 left-32 w-80 h-80 bg-gradient-to-r from-purple-400/10 to-cyan-400/10 rounded-full blur-3xl"></div>
+                
+                <!-- Floating particles -->
+                <div class="absolute top-20 left-20 w-3 h-3 bg-blue-400 rounded-full animate-ping opacity-40"></div>
+                <div class="absolute bottom-40 right-40 w-2 h-2 bg-purple-400 rounded-full animate-ping opacity-40 delay-1000"></div>
+                <div class="absolute top-1/2 left-1/3 w-1 h-1 bg-cyan-400 rounded-full animate-ping opacity-40 delay-500"></div>
+            </div>
+            
+            <div class="container mx-auto px-4 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-100 to-purple-100 border border-blue-200 rounded-full mb-6">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></span>
+                        <span class="text-blue-700 font-medium">En Son Yazılar</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4">
+                        Blog Yazılarımız
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Teknoloji dünyasındaki son gelişmeler ve uzman ipuçları
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Blog Post 1 -->
+                    <article class="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2">
+                        <!-- SVG Icon Header -->
+                        <div class="h-48 bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center relative overflow-hidden">
+                            <svg class="w-24 h-24 text-blue-500 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            <!-- Floating decorations -->
+                            <div class="absolute top-4 right-4 w-8 h-8 bg-blue-200 rounded-full opacity-50 animate-pulse"></div>
+                            <div class="absolute bottom-4 left-4 w-6 h-6 bg-blue-300 rounded-full opacity-40 animate-pulse delay-300"></div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-blue-100 to-blue-200 text-blue-700 text-sm font-medium">
+                                    <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                                    Bakım & Onarım
+                                </span>
+                                <span class="text-gray-500 text-sm">28 Mayıs 2025</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                                Akıllı Telefonunuzun Ömrünü Nasıl Uzatabilirsiniz?
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Telefonunuzun ömrünü uzatacak bakım ipuçları, batarya sağlığını koruma ve en sık karşılaşılan sorunları önleme yöntemleri...
+                            </p>
+                            <a href="#" class="group/link inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                                Devamını Oku
+                                <svg class="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 2 -->
+                    <article class="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 hover:-translate-y-2">
+                        <div class="h-48 bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center relative overflow-hidden">
+                            <svg class="w-24 h-24 text-purple-500 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1z"/>
+                            </svg>
+                            <div class="absolute top-4 right-4 w-8 h-8 bg-purple-200 rounded-full opacity-50 animate-pulse"></div>
+                            <div class="absolute bottom-4 left-4 w-6 h-6 bg-purple-300 rounded-full opacity-40 animate-pulse delay-300"></div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-purple-100 to-purple-200 text-purple-700 text-sm font-medium">
+                                    <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                                    Teknoloji
+                                </span>
+                                <span class="text-gray-500 text-sm">25 Mayıs 2025</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                                2025 Yılının En İyi Dizüstü Bilgisayarları
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Bu yılın en yeni laptop modellerini inceledik. Fiyat performans karşılaştırmaları ve hangi kullanıcı tipine hangi model daha uygun...
+                            </p>
+                            <a href="#" class="group/link inline-flex items-center text-purple-600 font-semibold hover:text-purple-700 transition-colors">
+                                Devamını Oku
+                                <svg class="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 3 -->
+                    <article class="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-500 hover:-translate-y-2">
+                        <div class="h-48 bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center relative overflow-hidden">
+                            <svg class="w-24 h-24 text-green-500 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z"/>
+                            </svg>
+                            <div class="absolute top-4 right-4 w-8 h-8 bg-green-200 rounded-full opacity-50 animate-pulse"></div>
+                            <div class="absolute bottom-4 left-4 w-6 h-6 bg-green-300 rounded-full opacity-40 animate-pulse delay-300"></div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-green-100 to-green-200 text-green-700 text-sm font-medium">
+                                    <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                                    İpuçları
+                                </span>
+                                <span class="text-gray-500 text-sm">22 Mayıs 2025</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
+                                Verilerinizi Nasıl Güvende Tutabilirsiniz?
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Önemli verilerinizi kaybetmemek için düzenli yedekleme nasıl yapılır? Hangi depolama çözümleri güvenli ve etkili?
+                            </p>
+                            <a href="#" class="group/link inline-flex items-center text-green-600 font-semibold hover:text-green-700 transition-colors">
+                                Devamını Oku
+                                <svg class="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 4 -->
+                    <article class="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 hover:-translate-y-2">
+                        <div class="h-48 bg-gradient-to-br from-orange-50 to-orange-100 flex items-center justify-center relative overflow-hidden">
+                            <svg class="w-24 h-24 text-orange-500 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M2,6H22V18H2V6M14,9A3,3 0 0,1 17,12A3,3 0 0,1 14,15A3,3 0 0,1 11,12A3,3 0 0,1 14,9M9,8A2,2 0 0,1 7,10V14A2,2 0 0,1 9,16H19A2,2 0 0,1 21,14V10A2,2 0 0,1 19,8H9Z"/>
+                            </svg>
+                            <div class="absolute top-4 right-4 w-8 h-8 bg-orange-200 rounded-full opacity-50 animate-pulse"></div>
+                            <div class="absolute bottom-4 left-4 w-6 h-6 bg-orange-300 rounded-full opacity-40 animate-pulse delay-300"></div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-orange-100 to-orange-200 text-orange-700 text-sm font-medium">
+                                    <span class="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
+                                    Teknoloji
+                                </span>
+                                <span class="text-gray-500 text-sm">18 Mayıs 2025</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                                Yeni Nesil İşlemcilerin Performans Karşılaştırması
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Intel ve AMD'nin yeni nesil işlemcilerini test ettik. Hangi işlemci hangi iş yükünde daha iyi performans gösteriyor?
+                            </p>
+                            <a href="#" class="group/link inline-flex items-center text-orange-600 font-semibold hover:text-orange-700 transition-colors">
+                                Devamını Oku
+                                <svg class="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 5 -->
+                    <article class="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl hover:shadow-red-500/10 transition-all duration-500 hover:-translate-y-2">
+                        <div class="h-48 bg-gradient-to-br from-red-50 to-red-100 flex items-center justify-center relative overflow-hidden">
+                            <svg class="w-24 h-24 text-red-500 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,7V13H13V7H11M11,15V17H13V15H11Z"/>
+                            </svg>
+                            <div class="absolute top-4 right-4 w-8 h-8 bg-red-200 rounded-full opacity-50 animate-pulse"></div>
+                            <div class="absolute bottom-4 left-4 w-6 h-6 bg-red-300 rounded-full opacity-40 animate-pulse delay-300"></div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-red-100 to-red-200 text-red-700 text-sm font-medium">
+                                    <span class="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+                                    Haberler
+                                </span>
+                                <span class="text-gray-500 text-sm">15 Mayıs 2025</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-red-600 transition-colors">
+                                Siber Güvenlik Tehditleri ve Korunma Yolları
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                2025 yılında karşılaştığımız en büyük siber güvenlik tehditleri ve bunlara karşı alabileceğimiz önlemler...
+                            </p>
+                            <a href="#" class="group/link inline-flex items-center text-red-600 font-semibold hover:text-red-700 transition-colors">
+                                Devamını Oku
+                                <svg class="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 6 -->
+                    <article class="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500 hover:-translate-y-2">
+                        <div class="h-48 bg-gradient-to-br from-indigo-50 to-indigo-100 flex items-center justify-center relative overflow-hidden">
+                            <svg class="w-24 h-24 text-indigo-500 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9,12L11,14L15,10L13,8L11,10L9,8L7,10L9,12M20,18V4H18V18H20M21,3A1,1 0 0,1 22,4V18A1,1 0 0,1 21,19H17V21H7V19H3A1,1 0 0,1 2,18V4A1,1 0 0,1 3,3H7V1H17V3H21Z"/>
+                            </svg>
+                            <div class="absolute top-4 right-4 w-8 h-8 bg-indigo-200 rounded-full opacity-50 animate-pulse"></div>
+                            <div class="absolute bottom-4 left-4 w-6 h-6 bg-indigo-300 rounded-full opacity-40 animate-pulse delay-300"></div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-indigo-100 to-indigo-200 text-indigo-700 text-sm font-medium">
+                                    <span class="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>
+                                    İpuçları
+                                </span>
+                                <span class="text-gray-500 text-sm">12 Mayıs 2025</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+                                Tablet ve Klavye Temizliği İçin Pratik Öneriler
+                            </h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Cihazlarınızı temiz tutmak hem hijyen hem de performans açısından çok önemli. İşte doğru temizlik yöntemleri...
+                            </p>
+                            <a href="#" class="group/link inline-flex items-center text-indigo-600 font-semibold hover:text-indigo-700 transition-colors">
+                                Devamını Oku
+                                <svg class="ml-2 w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Pagination -->
                 <div class="flex justify-center mt-12">
                     <nav>
                         <ul class="flex space-x-2">
@@ -350,7 +664,7 @@
         <section class="py-16 bg-primary-700 text-white">
             <div class="container mx-auto px-4">
                 <div class="max-w-3xl mx-auto text-center">
-                    <h2 class="text-3xl font-bold mb-4">Blog Yazılarımızı Takip Edin</h2>
+                    <h2 class="text-3xl font-bold mb-4 text-white">Blog Yazılarımızı Takip Edin</h2>
                     <p class="text-lg opacity-90 mb-8">Yeni blog yazılarımızdan, teknik ipuçlarından ve teknoloji haberlerinden haberdar olmak için abone olun.</p>
                     <div class="flex flex-col sm:flex-row gap-2 max-w-lg mx-auto">
                         <input type="email" placeholder="E-posta adresiniz" class="flex-grow p-3 rounded-md text-gray-800 focus:outline-none">
@@ -362,93 +676,189 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-secondary-800 text-white pt-12 mt-auto">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-                <!-- Firma Bilgileri -->
-                <div>
-                    <h3 class="text-xl font-semibold mb-4 flex items-center">
-                        <span class="text-primary-300 text-2xl mr-2">TTS</span> Bilişim
-                    </h3>
-                    <p class="text-gray-300 mb-4">Profesyonel bilgisayar, telefon ve tablet teknik servis hizmetleri.</p>
-                    <div class="flex space-x-4">
-                        <a href="https://facebook.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://twitter.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://instagram.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
+    <footer class="relative bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-20 w-64 h-64 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-full blur-3xl"></div>
+            
+            <!-- Tech pattern overlay -->
+            <div class="absolute inset-0 opacity-5">
+                <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="techPattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+                            <circle cx="30" cy="30" r="2" fill="currentColor"/>
+                            <path d="M30 10v20m-20 0h20m20 0v20m0-20h-20" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#techPattern)"/>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Main Footer Content -->
+            <div class="pt-16 pb-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                    <!-- Company Info -->
+                    <div class="lg:col-span-1">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-4 flex items-center">
+                                <span class="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent text-3xl mr-3">TTS</span> 
+                                <span class="text-white">Bilişim</span>
+                            </h3>
+                            <p class="text-gray-300 mb-6 leading-relaxed">
+                                Profesyonel bilgisayar, telefon ve tablet teknik servis hizmetleri. 
+                                <span class="text-blue-400 font-semibold">En kaliteli</span> orijinal yedek parçalar.
+                            </p>
+                        </div>
+                        
+                        <!-- Social Media -->
+                        <div class="flex space-x-4">
+                            <a href="https://facebook.com" target="_blank" class="group w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                <i class="fab fa-facebook-f text-white group-hover:text-blue-200"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="group w-10 h-10 bg-gradient-to-r from-cyan-600 to-cyan-700 rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                <i class="fab fa-twitter text-white group-hover:text-cyan-200"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="group w-10 h-10 bg-gradient-to-r from-pink-600 to-rose-700 rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                <i class="fab fa-instagram text-white group-hover:text-pink-200"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="group w-10 h-10 bg-gradient-to-r from-blue-700 to-indigo-700 rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                <i class="fab fa-linkedin-in text-white group-hover:text-blue-200"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                
-                <!-- Hızlı Bağlantılar -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-gray-100">Hızlı Bağlantılar</h4>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-300 hover:text-primary-300 transition-colors">Ana Sayfa</a></li>
-                        <li><a href="hakkimizda.html" class="text-gray-300 hover:text-primary-300 transition-colors">Hakkımızda</a></li>
-                        <li><a href="hizmetlerimiz.html" class="text-gray-300 hover:text-primary-300 transition-colors">Hizmetlerimiz</a></li>
-                        <li><a href="yedek-parca.html" class="text-gray-300 hover:text-primary-300 transition-colors">Orijinal Yedek Parça</a></li>
-                        <li><a href="blog.html" class="text-gray-300 hover:text-primary-300 transition-colors">Blog</a></li>
-                        <li><a href="iletisim.html" class="text-gray-300 hover:text-primary-300 transition-colors">İletişim</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Hizmetler -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-gray-100">Hizmetlerimiz</h4>
-                    <ul class="space-y-2">
-                        <li><a href="hizmetlerimiz.html#bilgisayar" class="text-gray-300 hover:text-primary-300 transition-colors">Bilgisayar Tamiri</a></li>
-                        <li><a href="hizmetlerimiz.html#telefon" class="text-gray-300 hover:text-primary-300 transition-colors">Telefon Tamiri</a></li>
-                        <li><a href="hizmetlerimiz.html#tablet" class="text-gray-300 hover:text-primary-300 transition-colors">Tablet Tamiri</a></li>
-                        <li><a href="hizmetlerimiz.html#anakart" class="text-gray-300 hover:text-primary-300 transition-colors">Anakart Tamiri</a></li>
-                        <li><a href="hizmetlerimiz.html#veri-kurtarma" class="text-gray-300 hover:text-primary-300 transition-colors">Veri Kurtarma</a></li>
-                        <li><a href="yedek-parca.html" class="text-gray-300 hover:text-primary-300 transition-colors">Orijinal Yedek Parça</a></li>
-                    </ul>
-                </div>
-                
-                <!-- İletişim Bilgileri -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-gray-100">İletişim</h4>
-                    <ul class="space-y-3 text-gray-300">
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary-300"></i>
-                            <span>Sahrayıcedit mh. İnönü cd. Sinan sk. No:1a<br>Kadıköy, İstanbul</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-phone-alt mr-3 text-primary-300"></i>
-                            <span><a href="tel:+902165551234" class="hover:text-primary-300 transition-colors">0544 924 71 72 – 0216 302 10 10</a></span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope mr-3 text-primary-300"></i>
-                            <span><a href="mailto:info@ttsbilisim.com" class="hover:text-primary-300 transition-colors">info@ttsbilisim.com</a></span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-clock mr-3 text-primary-300"></i>
-                            <span>Pzt - Cmt: 09:00 - 19:00</span>
-                        </li>
-                    </ul>
+                    
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-6 text-white relative">
+                            Hızlı Bağlantılar
+                            <div class="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></div>
+                        </h4>
+                        <ul class="space-y-3">
+                            <li><a href="index.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Ana Sayfa
+                            </a></li>
+                            <li><a href="hakkimizda.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Hakkımızda
+                            </a></li>
+                            <li><a href="hizmetlerimiz.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Hizmetlerimiz
+                            </a></li>
+                            <li><a href="yedek-parca.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Orijinal Yedek Parça
+                            </a></li>
+                            <li><a href="blog.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Blog
+                            </a></li>
+                            <li><a href="iletisim.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                İletişim
+                            </a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Services -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-6 text-white relative">
+                            Hizmetlerimiz
+                            <div class="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full"></div>
+                        </h4>
+                        <ul class="space-y-3">
+                            <li><a href="hizmetlerimiz.html#bilgisayar" class="text-gray-300 hover:text-purple-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Bilgisayar Tamiri
+                            </a></li>
+                            <li><a href="hizmetlerimiz.html#telefon" class="text-gray-300 hover:text-purple-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Telefon Tamiri
+                            </a></li>
+                            <li><a href="hizmetlerimiz.html#tablet" class="text-gray-300 hover:text-purple-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Tablet Tamiri
+                            </a></li>
+                            <li><a href="hizmetlerimiz.html#anakart" class="text-gray-300 hover:text-purple-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Anakart Tamiri
+                            </a></li>
+                            <li><a href="hizmetlerimiz.html#veri-kurtarma" class="text-gray-300 hover:text-purple-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Veri Kurtarma
+                            </a></li>
+                            <li><a href="yedek-parca.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Orijinal Yedek Parça
+                            </a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-6 text-white relative">
+                            İletişim Bilgileri
+                            <div class="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-green-500 to-cyan-600 rounded-full"></div>
+                        </h4>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start group">
+                                <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-white text-sm"></i>
+                                </div>
+                                <span class="group-hover:text-blue-400 transition-colors duration-300">
+                                    Sahrayıcedit mh. İnönü cd. Sinan sk. No:1a<br>Kadıköy, İstanbul
+                                </span>
+                            </li>
+                            <li class="flex items-center group">
+                                <div class="w-8 h-8 bg-gradient-to-r from-green-500 to-cyan-600 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-phone-alt text-white text-sm"></i>
+                                </div>
+                                <div class="space-y-1">
+                                    <div><a href="tel:+905449247172" class="hover:text-green-400 transition-colors duration-300">0544 924 71 72</a></div>
+                                    <div><a href="tel:+902163021010" class="hover:text-green-400 transition-colors duration-300">0216 302 10 10</a></div>
+                                </div>
+                            </li>
+                            <li class="flex items-center group">
+                                <div class="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-envelope text-white text-sm"></i>
+                                </div>
+                                <span><a href="mailto:info@ttsbilisim.com" class="hover:text-purple-400 transition-colors duration-300">info@ttsbilisim.com</a></span>
+                            </li>
+                            <li class="flex items-center group">
+                                <div class="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-clock text-white text-sm"></i>
+                                </div>
+                                <span class="group-hover:text-orange-400 transition-colors duration-300">Pzt - Cmt: 09:00 - 19:00</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             
             <!-- Google Maps -->
-            <div class="mb-8">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12046.171111851305!2d29.02699!3d40.988599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab8679bfb3d31%3A0x7d75715e081dfa5c!2sKad%C4%B1k%C3%B6y%2C%20%C4%B0stanbul!5e0!3m2!1str!2str!4v1651339764653!5m2!1str!2str" class="w-full h-64 rounded-lg" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm border border-white/10 rounded-2xl p-2">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3012.088095865558!2d29.080603890702548!3d40.979551747342796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac7b6b9aec73f%3A0xfabad29babb99d9d!2zU2FocmF5xLEgQ2VkaXQsIFNpbmFuIFNva2HEn8SxIE5vOjEsIDM0NzM0IEthZMSxa8O2eS_EsHN0YW5idWw!5e0!3m2!1str!2str!4v1748375602677!5m2!1str!2str" class="w-full h-64 rounded-2xl shadow-2xl" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
             
-            <div class="border-t border-gray-700 py-6">
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-700/50 py-8">
                 <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-400 mb-4 md:mb-0">© 2025 TTS Bilişim. Tüm hakları saklıdır.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-primary-300 transition-colors">Gizlilik Politikası</a>
-                        <a href="#" class="text-gray-400 hover:text-primary-300 transition-colors">Kullanım Koşulları</a>
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-gray-400 flex items-center">
+                            <span class="mr-2">© 2025</span>
+                            <span class="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent font-semibold">TTS Bilişim</span>
+                            <span class="ml-2">. Tüm hakları saklıdır.</span>
+                        </p>
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm">Gizlilik Politikası</a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm">Kullanım Koşulları</a>
                     </div>
                 </div>
             </div>

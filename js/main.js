@@ -2,9 +2,17 @@
 
 // Mobil menü açma/kapama işlevselliği
 document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
     
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+
+    // Eski ID'yi de destekle
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
     if (mobileMenuToggle && mobileMenu) {
         mobileMenuToggle.addEventListener('click', function() {
             mobileMenu.classList.toggle('hidden');
@@ -23,52 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Swiper Banner Slider İnitializasyonu
-    const bannerSwiper = new Swiper('.hero-swiper', {
-        loop: true,
-        speed: 1000,
-        autoplay: {
-            delay: 5000,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
-    });
 
-    // Testimonial Slider İnitializasyonu
-    const testimonialSwiper = new Swiper('.testimonial-swiper', {
-        loop: true,
-        speed: 800,
-        autoplay: {
-            delay: 4000,
-        },
-        slidesPerView: 1,
-        spaceBetween: 30,
-        pagination: {
-            el: '.testimonial-pagination',
-            clickable: true,
-        },
-        breakpoints: {
-            640: {
-                slidesPerView: 1,
-            },
-            768: {
-                slidesPerView: 2,
-            },
-            1024: {
-                slidesPerView: 3,
-            },
-        }
-    });
+
 
     // Animasyonlu Görünüm Efekti
     const animatedElements = document.querySelectorAll('.animate-on-scroll');

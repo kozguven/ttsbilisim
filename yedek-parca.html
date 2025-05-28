@@ -67,46 +67,149 @@
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
-    <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4">
+    <!-- Ultra Modern Header -->
+    <header class="relative bg-white/80 backdrop-blur-xl border-b border-gray-200/50 sticky top-0 z-50">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 bg-gradient-to-r from-amber-50/30 via-white to-orange-50/30"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
             <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
                 <div class="flex items-center space-x-2">
                     <a href="index.html" class="flex items-center">
                         <img src="img/logo.png" alt="TTS Bilişim Logo" class="h-12 mr-2">
-                        
                     </a>
                 </div>
                 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-500 hover:text-primary focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
+                    <button id="mobile-menu-button" class="group relative p-3 bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl border border-gray-200/50 hover:border-amber-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-orange-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <i class="fas fa-bars text-xl text-gray-700 group-hover:text-amber-600 transition-colors duration-300 relative z-10"></i>
                     </button>
                 </div>
                 
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex space-x-6">
-                    <a href="index.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Ana Sayfa</a>
-                    <a href="hakkimizda.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Hakkımızda</a>
-                    <a href="hizmetlerimiz.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Hizmetlerimiz</a>
-                    <a href="yedek-parca.html" class="text-primary font-medium hover:text-primary-700 transition-colors">Orijinal Yedek Parça</a>
-                    <a href="blog.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Blog</a>
-                    <a href="iletisim.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">İletişim</a>
+                <!-- Ultra Modern Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-2">
+                    <div class="flex items-center space-x-1 bg-white/60 backdrop-blur-sm border border-gray-200/50 rounded-2xl p-2 shadow-lg shadow-gray-200/50">
+                        <a href="index.html" class="group relative px-4 py-2.5 text-gray-700 font-medium rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-700">
+                            <span class="flex items-center">
+                                <i class="fas fa-home text-sm mr-2 text-blue-500"></i>
+                                Ana Sayfa
+                            </span>
+                        </a>
+                        
+                        <a href="hakkimizda.html" class="group relative px-4 py-2.5 text-gray-700 font-medium rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-emerald-50 hover:to-teal-50 hover:text-emerald-700">
+                            <span class="flex items-center">
+                                <i class="fas fa-info-circle text-sm mr-2 text-emerald-500"></i>
+                                Hakkımızda
+                            </span>
+                        </a>
+                        
+                        <a href="hizmetlerimiz.html" class="group relative px-4 py-2.5 text-gray-700 font-medium rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-purple-50 hover:to-indigo-50 hover:text-purple-700">
+                            <span class="flex items-center">
+                                <i class="fas fa-cogs text-sm mr-2 text-purple-500"></i>
+                                Hizmetlerimiz
+                            </span>
+                        </a>
+                        
+                        <a href="yedek-parca.html" class="group relative px-4 py-2.5 bg-gradient-to-r from-amber-500 to-orange-600 text-white font-medium rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/25">
+                            <span class="relative z-10 flex items-center">
+                                <i class="fas fa-microchip text-sm mr-2"></i>
+                                Yedek Parça
+                            </span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-orange-500 to-amber-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                        
+                        <a href="blog.html" class="group relative px-4 py-2.5 text-gray-700 font-medium rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-50 hover:to-red-50 hover:text-orange-700">
+                            <span class="flex items-center">
+                                <i class="fas fa-blog text-sm mr-2 text-orange-500"></i>
+                                Blog
+                            </span>
+                        </a>
+                        
+                        <a href="iletisim.html" class="group relative px-4 py-2.5 text-gray-700 font-medium rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-violet-50 hover:to-fuchsia-50 hover:text-violet-700">
+                            <span class="flex items-center">
+                                <i class="fas fa-phone text-sm mr-2 text-violet-500"></i>
+                                İletişim
+                            </span>
+                        </a>
+                    </div>
+                    
+                    <!-- Emergency Contact Button -->
+                    <div class="ml-4">
+                        <a href="tel:+905449247172" class="group relative px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25 flex items-center">
+                            <span class="relative z-10 flex items-center">
+                                <i class="fas fa-phone-alt mr-2 group-hover:rotate-12 transition-transform duration-300"></i>
+                                <span class="hidden lg:inline">Acil Arama</span>
+                                <span class="lg:hidden">Ara</span>
+                            </span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-green-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                    </div>
                 </nav>
             </div>
         </div>
         
-        <!-- Mobile Navigation -->
-        <nav id="mobile-menu" class="hidden bg-white px-4 py-3 md:hidden border-t border-gray-200">
-            <div class="flex flex-col space-y-3">
-                <a href="index.html" class="text-secondary-600 font-medium py-2">Ana Sayfa</a>
-                <a href="hakkimizda.html" class="text-secondary-600 font-medium py-2">Hakkımızda</a>
-                <a href="hizmetlerimiz.html" class="text-secondary-600 font-medium py-2">Hizmetlerimiz</a>
-                <a href="yedek-parca.html" class="text-primary font-medium py-2">Orijinal Yedek Parça</a>
-                <a href="blog.html" class="text-secondary-600 font-medium py-2">Blog</a>
-                <a href="iletisim.html" class="text-secondary-600 font-medium py-2">İletişim</a>
+        <!-- Ultra Modern Mobile Navigation -->
+        <nav id="mobile-menu" class="hidden bg-white/95 backdrop-blur-lg border-t border-gray-200/50 md:hidden relative z-40">
+            <div class="container mx-auto px-4 py-6">
+                <div class="grid grid-cols-2 gap-3">
+                    <a href="index.html" class="group relative p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-gray-200/50 hover:border-blue-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-home text-2xl text-blue-500 mb-2 block"></i>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-blue-700">Ana Sayfa</span>
+                        </div>
+                    </a>
+                    
+                    <a href="hakkimizda.html" class="group relative p-4 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl border border-gray-200/50 hover:border-emerald-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-info-circle text-2xl text-emerald-500 mb-2 block"></i>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-emerald-700">Hakkımızda</span>
+                        </div>
+                    </a>
+                    
+                    <a href="hizmetlerimiz.html" class="group relative p-4 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl border border-gray-200/50 hover:border-purple-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-indigo-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-cogs text-2xl text-purple-500 mb-2 block"></i>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-purple-700">Hizmetlerimiz</span>
+                        </div>
+                    </a>
+                    
+                    <a href="yedek-parca.html" class="group relative p-4 bg-gradient-to-r from-amber-500 to-orange-600 rounded-xl border border-amber-300/50 transition-all duration-300">
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-microchip text-2xl text-white mb-2 block"></i>
+                            <span class="text-sm font-medium text-white">Yedek Parça</span>
+                        </div>
+                    </a>
+                    
+                    <a href="blog.html" class="group relative p-4 bg-gradient-to-r from-orange-50 to-red-50 rounded-xl border border-gray-200/50 hover:border-orange-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-blog text-2xl text-orange-500 mb-2 block"></i>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-orange-700">Blog</span>
+                        </div>
+                    </a>
+                    
+                    <a href="iletisim.html" class="group relative p-4 bg-gradient-to-r from-violet-50 to-fuchsia-50 rounded-xl border border-gray-200/50 hover:border-violet-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-violet-500/10 to-fuchsia-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-phone text-2xl text-violet-500 mb-2 block"></i>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-violet-700">İletişim</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Emergency Call Button -->
+                <div class="mt-6">
+                    <a href="tel:+905449247172" class="w-full flex items-center justify-center p-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-emerald-500 hover:to-green-600 transition-all duration-300">
+                        <i class="fas fa-phone-alt mr-3 text-lg"></i>
+                        <span>Acil Arama - 0544 924 71 72</span>
+                    </a>
+                </div>
             </div>
         </nav>
     </header>
@@ -116,6 +219,24 @@
         <section class="relative min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-orange-900 overflow-hidden">
             <!-- Dynamic Background -->
             <div class="absolute inset-0">
+                <!-- Grid Pattern -->
+                <div class="absolute inset-0 opacity-20">
+                    <div class="grid grid-cols-12 h-full">
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                    </div>
+                </div>
+                
                 <!-- Animated Gradient Mesh -->
                 <div class="absolute inset-0 bg-gradient-to-r from-amber-600/20 via-orange-600/20 to-yellow-600/20 animate-pulse"></div>
                 
@@ -1546,7 +1667,7 @@
             <!-- Google Maps -->
             <div class="mb-12">
                 <div class="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm border border-white/10 rounded-2xl p-2">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12046.171111851305!2d29.02699!3d40.988599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab8679bfb3d31%3A0x7d75715e081dfa5c!2sKad%C4%B1k%C3%B6y%2C%20%C4%B0stanbul!5e0!3m2!1str!2str!4v1651339764653!5m2!1str!2str" class="w-full h-64 rounded-xl" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3012.088095865558!2d29.080603890702548!3d40.979551747342796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac7b6b9aec73f%3A0xfabad29babb99d9d!2zU2FocmF5xLEgQ2VkaXQsIFNpbmFuIFNva2HEn8SxIE5vOjEsIDM0NzM0IEthZMSxa8O2eS_EsHN0YW5idWw!5e0!3m2!1str!2str!4v1748375602677!5m2!1str!2str" class="w-full h-64 rounded-2xl shadow-2xl" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
             

@@ -67,295 +67,828 @@
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
-    <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4">
+    <!-- Ultra Modern Header -->
+    <header class="relative bg-white/80 backdrop-blur-xl border-b border-gray-200/50 sticky top-0 z-50">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 bg-gradient-to-r from-violet-50/30 via-white to-fuchsia-50/30"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
             <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
                 <div class="flex items-center space-x-2">
                     <a href="index.html" class="flex items-center">
                         <img src="img/logo.png" alt="TTS Bilişim Logo" class="h-12 mr-2">
-                        
                     </a>
                 </div>
                 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-500 hover:text-primary focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
+                    <button id="mobile-menu-button" class="group relative p-3 bg-gradient-to-r from-violet-50 to-fuchsia-50 rounded-xl border border-gray-200/50 hover:border-violet-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-violet-500/10 to-fuchsia-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <i class="fas fa-bars text-xl text-gray-700 group-hover:text-violet-600 transition-colors duration-300 relative z-10"></i>
                     </button>
                 </div>
                 
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex space-x-6">
-                    <a href="index.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Ana Sayfa</a>
-                    <a href="hakkimizda.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Hakkımızda</a>
-                    <a href="hizmetlerimiz.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Hizmetlerimiz</a>
-                    <a href="yedek-parca.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Orijinal Yedek Parça</a>
-                    <a href="blog.html" class="text-secondary-600 font-medium hover:text-primary transition-colors">Blog</a>
-                    <a href="iletisim.html" class="text-primary font-medium hover:text-primary-700 transition-colors">İletişim</a>
+                <!-- Ultra Modern Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-2">
+                    <div class="flex items-center space-x-1 bg-white/60 backdrop-blur-sm border border-gray-200/50 rounded-2xl p-2 shadow-lg shadow-gray-200/50">
+                        <a href="index.html" class="group relative px-4 py-2.5 text-gray-700 font-medium rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-700">
+                            <span class="flex items-center">
+                                <i class="fas fa-home text-sm mr-2 text-blue-500"></i>
+                                Ana Sayfa
+                            </span>
+                        </a>
+                        
+                        <a href="hakkimizda.html" class="group relative px-4 py-2.5 text-gray-700 font-medium rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-emerald-50 hover:to-teal-50 hover:text-emerald-700">
+                            <span class="flex items-center">
+                                <i class="fas fa-info-circle text-sm mr-2 text-emerald-500"></i>
+                                Hakkımızda
+                            </span>
+                        </a>
+                        
+                        <a href="hizmetlerimiz.html" class="group relative px-4 py-2.5 text-gray-700 font-medium rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-purple-50 hover:to-indigo-50 hover:text-purple-700">
+                            <span class="flex items-center">
+                                <i class="fas fa-cogs text-sm mr-2 text-purple-500"></i>
+                                Hizmetlerimiz
+                            </span>
+                        </a>
+                        
+                        <a href="yedek-parca.html" class="group relative px-4 py-2.5 text-gray-700 font-medium rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-amber-50 hover:to-orange-50 hover:text-amber-700">
+                            <span class="flex items-center">
+                                <i class="fas fa-microchip text-sm mr-2 text-amber-500"></i>
+                                Yedek Parça
+                            </span>
+                        </a>
+                        
+                        <a href="blog.html" class="group relative px-4 py-2.5 text-gray-700 font-medium rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-orange-50 hover:to-red-50 hover:text-orange-700">
+                            <span class="flex items-center">
+                                <i class="fas fa-blog text-sm mr-2 text-orange-500"></i>
+                                Blog
+                            </span>
+                        </a>
+                        
+                        <a href="iletisim.html" class="group relative px-4 py-2.5 bg-gradient-to-r from-violet-500 to-fuchsia-600 text-white font-medium rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-violet-500/25">
+                            <span class="relative z-10 flex items-center">
+                                <i class="fas fa-phone text-sm mr-2"></i>
+                                İletişim
+                            </span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-fuchsia-500 to-violet-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                    </div>
+                    
+                    <!-- Emergency Contact Button -->
+                    <div class="ml-4">
+                        <a href="tel:+905449247172" class="group relative px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25 flex items-center">
+                            <span class="relative z-10 flex items-center">
+                                <i class="fas fa-phone-alt mr-2 group-hover:rotate-12 transition-transform duration-300"></i>
+                                <span class="hidden lg:inline">Acil Arama</span>
+                                <span class="lg:hidden">Ara</span>
+                            </span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-green-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                    </div>
                 </nav>
             </div>
         </div>
         
-        <!-- Mobile Navigation -->
-        <nav id="mobile-menu" class="hidden bg-white px-4 py-3 md:hidden border-t border-gray-200">
-            <div class="flex flex-col space-y-3">
-                <a href="index.html" class="text-secondary-600 font-medium py-2">Ana Sayfa</a>
-                <a href="hakkimizda.html" class="text-secondary-600 font-medium py-2">Hakkımızda</a>
-                <a href="hizmetlerimiz.html" class="text-secondary-600 font-medium py-2">Hizmetlerimiz</a>
-                <a href="yedek-parca.html" class="text-secondary-600 font-medium py-2">Orijinal Yedek Parça</a>
-                <a href="blog.html" class="text-secondary-600 font-medium py-2">Blog</a>
-                <a href="iletisim.html" class="text-primary font-medium py-2">İletişim</a>
+        <!-- Ultra Modern Mobile Navigation -->
+        <nav id="mobile-menu" class="hidden bg-white/95 backdrop-blur-lg border-t border-gray-200/50 md:hidden relative z-40">
+            <div class="container mx-auto px-4 py-6">
+                <div class="grid grid-cols-2 gap-3">
+                    <a href="index.html" class="group relative p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-gray-200/50 hover:border-blue-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-home text-2xl text-blue-500 mb-2 block"></i>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-blue-700">Ana Sayfa</span>
+                        </div>
+                    </a>
+                    
+                    <a href="hakkimizda.html" class="group relative p-4 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl border border-gray-200/50 hover:border-emerald-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-info-circle text-2xl text-emerald-500 mb-2 block"></i>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-emerald-700">Hakkımızda</span>
+                        </div>
+                    </a>
+                    
+                    <a href="hizmetlerimiz.html" class="group relative p-4 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl border border-gray-200/50 hover:border-purple-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-indigo-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-cogs text-2xl text-purple-500 mb-2 block"></i>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-purple-700">Hizmetlerimiz</span>
+                        </div>
+                    </a>
+                    
+                    <a href="yedek-parca.html" class="group relative p-4 bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl border border-gray-200/50 hover:border-amber-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-orange-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-microchip text-2xl text-amber-500 mb-2 block"></i>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-amber-700">Yedek Parça</span>
+                        </div>
+                    </a>
+                    
+                    <a href="blog.html" class="group relative p-4 bg-gradient-to-r from-orange-50 to-red-50 rounded-xl border border-gray-200/50 hover:border-orange-300/50 transition-all duration-300">
+                        <div class="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-blog text-2xl text-orange-500 mb-2 block"></i>
+                            <span class="text-sm font-medium text-gray-700 group-hover:text-orange-700">Blog</span>
+                        </div>
+                    </a>
+                    
+                    <a href="iletisim.html" class="group relative p-4 bg-gradient-to-r from-violet-500 to-fuchsia-600 rounded-xl border border-violet-300/50 transition-all duration-300">
+                        <div class="relative z-10 text-center">
+                            <i class="fas fa-phone text-2xl text-white mb-2 block"></i>
+                            <span class="text-sm font-medium text-white">İletişim</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Emergency Call Button -->
+                <div class="mt-6">
+                    <a href="tel:+905449247172" class="w-full flex items-center justify-center p-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-emerald-500 hover:to-green-600 transition-all duration-300">
+                        <i class="fas fa-phone-alt mr-3 text-lg"></i>
+                        <span>Acil Arama - 0544 924 71 72</span>
+                    </a>
+                </div>
             </div>
         </nav>
     </header>
 
+
     <main>
-        <!-- Sayfa Başlığı -->
-        <section class="bg-primary-700 text-white py-16">
-            <div class="container mx-auto px-4">
-                <div class="max-w-3xl mx-auto text-center">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4">İletişim</h1>
-                    <p class="text-lg text-white opacity-90">TTS Bilişim ile iletişime geçin, teknik servis ihtiyaçlarınız için bizimle irtibat kurun.</p>
+        <!-- Ultra Modern Hero Section -->
+        <section class="relative min-h-[70vh] bg-gradient-to-br from-violet-900 via-fuchsia-900 to-purple-900 overflow-hidden">
+            <!-- Dynamic Background -->
+            <div class="absolute inset-0">
+                <!-- Grid Pattern -->
+                <div class="absolute inset-0 opacity-20">
+                    <div class="grid grid-cols-12 h-full">
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                    </div>
+                </div>
+                
+                <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-violet-600/20 to-fuchsia-600/20"></div>
+                <div class="absolute top-10 right-10 w-96 h-96 bg-violet-400 rounded-full opacity-10 animate-pulse"></div>
+                <div class="absolute bottom-10 left-10 w-80 h-80 bg-fuchsia-400 rounded-full opacity-10 animate-pulse delay-700"></div>
+                <div class="absolute top-1/2 right-1/3 w-64 h-64 bg-purple-400 rounded-full opacity-10 animate-pulse delay-300"></div>
+                
+                <!-- Floating geometric shapes -->
+                <div class="absolute top-32 left-32 w-16 h-16 bg-gradient-to-r from-violet-400 to-purple-500 rounded-lg rotate-12 opacity-20 animate-pulse"></div>
+                <div class="absolute bottom-40 right-40 w-12 h-12 bg-gradient-to-r from-fuchsia-400 to-pink-500 rounded-full opacity-20 animate-pulse delay-1000"></div>
+                <div class="absolute top-2/3 left-1/4 w-8 h-8 bg-gradient-to-r from-purple-400 to-violet-500 rounded-lg rotate-45 opacity-20 animate-pulse delay-500"></div>
+            </div>
+            
+            <!-- Hero Content -->
+            <div class="relative z-10 container mx-auto px-4 pt-20 pb-16">
+                <div class="max-w-4xl mx-auto text-center">
+                    <!-- Badge -->
+                    <div class="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-8">
+                        <span class="w-2 h-2 bg-cyan-400 rounded-full mr-3 animate-pulse"></span>
+                        <span class="text-white font-medium">7/24 Ulaşılabilir</span>
+                    </div>
+                    
+                    <!-- Main Title -->
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                        <span class="bg-gradient-to-r from-white via-cyan-100 to-blue-200 bg-clip-text text-transparent">
+                            İletişime Geçin
+                        </span>
+                    </h1>
+                    
+                    <!-- Subtitle -->
+                    <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                        TTS Bilişim uzman ekibi ile 
+                        <span class="text-transparent bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text font-semibold">iletişime geçin</span>, 
+                        teknik servis ihtiyaçlarınız için randevu alın
+                    </p>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="tel:+905449247172" class="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105 flex items-center">
+                            <i class="fas fa-phone-alt mr-3 group-hover:rotate-12 transition-transform duration-300"></i>
+                            <span>Hemen Arayın</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                        </a>
+                        
+                        <a href="https://wa.me/905449247172" target="_blank" class="group relative px-8 py-4 bg-transparent border-2 border-white/50 text-white rounded-2xl font-semibold backdrop-blur-sm hover:border-white hover:bg-white/10 transition-all duration-300 hover:scale-105 flex items-center">
+                            <i class="fab fa-whatsapp mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modern Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white">
+                <div class="flex flex-col items-center">
+                    <span class="text-sm font-medium mb-2">Aşağı Kaydırın</span>
+                    <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+                        <div class="w-1 h-3 bg-white rounded-full mt-2 animate-bounce"></div>
+                    </div>
                 </div>
             </div>
         </section>
         
-        <!-- İletişim Bilgileri -->
-        <section class="py-16 bg-white">
-            <div class="container mx-auto px-4">
+        <!-- Ultra Modern Contact Cards Section -->
+        <section class="relative py-24 bg-gradient-to-br from-white via-blue-50 to-purple-50 overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute inset-0">
+                <div class="absolute top-32 right-32 w-96 h-96 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-32 left-32 w-80 h-80 bg-gradient-to-r from-purple-400/10 to-cyan-400/10 rounded-full blur-3xl"></div>
+                
+                <!-- Floating particles -->
+                <div class="absolute top-20 left-20 w-3 h-3 bg-blue-400 rounded-full animate-ping opacity-40"></div>
+                <div class="absolute bottom-40 right-40 w-2 h-2 bg-purple-400 rounded-full animate-ping opacity-40 delay-1000"></div>
+                <div class="absolute top-1/2 left-1/3 w-1 h-1 bg-cyan-400 rounded-full animate-ping opacity-40 delay-500"></div>
+            </div>
+            
+            <div class="container mx-auto px-4 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-100 to-purple-100 border border-blue-200 rounded-full mb-6">
+                        <span class="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></span>
+                        <span class="text-blue-700 font-medium">İletişim Bilgileri</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4">
+                        Bizimle İletişim
+                    </h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Size en yakın konumdan hizmet verebilmek için buradayız
+                    </p>
+                </div>
+
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <!-- İletişim Kartı 1: Adres -->
-                    <div class="bg-gray-50 rounded-lg shadow-sm p-8 text-center">
-                        <div class="w-16 h-16 bg-primary rounded-full mx-auto flex items-center justify-center mb-6">
-                            <i class="fas fa-map-marker-alt text-white text-2xl"></i>
+                    <!-- Contact Card 1: Address -->
+                    <div class="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2">
+                        <div class="h-48 bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center relative overflow-hidden">
+                            <svg class="w-24 h-24 text-blue-500 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12,2C8.13,2 5,5.13 5,9c0,5.25 7,13 7,13s7,-7.75 7,-13C19,5.13 15.87,2 12,2zM12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5z"/>
+                            </svg>
+                            <div class="absolute top-4 right-4 w-8 h-8 bg-blue-200 rounded-full opacity-50 animate-pulse"></div>
+                            <div class="absolute bottom-4 left-4 w-6 h-6 bg-blue-300 rounded-full opacity-40 animate-pulse delay-300"></div>
                         </div>
-                        <h3 class="text-xl font-semibold text-primary mb-3">Adresimiz</h3>
-                        <p class="text-secondary-600 mb-2">Sahrayıcedit mh. İnönü cd.</p>
-                        <p class="text-secondary-600 mb-2"> Sinan sk. No:1a</p>
-                        <p class="text-secondary-600">Kadıköy, İstanbul</p>
+                        <div class="p-8 text-center">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
+                                Adresimiz
+                            </h3>
+                            <div class="space-y-2 text-gray-600">
+                                <p class="font-medium">Sahrayıcedit Mahallesi</p>
+                                <p>İnönü Caddesi, Sinan Sokak No:1A</p>
+                                <p>Kadıköy, İstanbul</p>
+                            </div>
+                            <div class="mt-6">
+                                <a href="https://maps.google.com/?q=Sahrayıcedit+Mahallesi+İnönü+Caddesi+Sinan+Sokak+No:1A+Kadıköy+İstanbul" target="_blank" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                                    <i class="fas fa-external-link-alt mr-2"></i>
+                                    Haritada Görüntüle
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     
-                    <!-- İletişim Kartı 2: Telefon -->
-                    <div class="bg-gray-50 rounded-lg shadow-sm p-8 text-center">
-                        <div class="w-16 h-16 bg-primary rounded-full mx-auto flex items-center justify-center mb-6">
-                            <i class="fas fa-phone-alt text-white text-2xl"></i>
+                    <!-- Contact Card 2: Phone -->
+                    <div class="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 hover:-translate-y-2">
+                        <div class="h-48 bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center relative overflow-hidden">
+                            <svg class="w-24 h-24 text-purple-500 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/>
+                            </svg>
+                            <div class="absolute top-4 right-4 w-8 h-8 bg-purple-200 rounded-full opacity-50 animate-pulse"></div>
+                            <div class="absolute bottom-4 left-4 w-6 h-6 bg-purple-300 rounded-full opacity-40 animate-pulse delay-300"></div>
                         </div>
-                        <h3 class="text-xl font-semibold text-primary mb-3">Telefonlarımız</h3>
-                        <p class="text-secondary-600 mb-2">Teknik Servis: <a href="tel:+902165551234" class="text-primary hover:underline">0544 924 71 72 – 0216 302 10 10</a></p>
-                        <p class="text-secondary-600 mb-2">WhatsApp: <a href="https://wa.me/905551234567" target="_blank" class="text-primary hover:underline">0544 924 71 72</a></p>
-                        <p class="text-secondary-600">Faks: 0216 555 67 89</p>
+                        <div class="p-8 text-center">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
+                                Telefonlarımız
+                            </h3>
+                            <div class="space-y-3 text-gray-600">
+                                <div>
+                                    <p class="font-medium text-gray-800">Teknik Servis</p>
+                                    <a href="tel:+905449247172" class="text-purple-600 hover:text-purple-700 font-semibold">0544 924 71 72</a>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-800">Sabit Hat</p>
+                                    <a href="tel:+902163021010" class="text-purple-600 hover:text-purple-700 font-semibold">0216 302 10 10</a>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-800">WhatsApp</p>
+                                    <a href="https://wa.me/905449247172" target="_blank" class="text-purple-600 hover:text-purple-700 font-semibold">0544 924 71 72</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     
-                    <!-- İletişim Kartı 3: E-posta -->
-                    <div class="bg-gray-50 rounded-lg shadow-sm p-8 text-center">
-                        <div class="w-16 h-16 bg-primary rounded-full mx-auto flex items-center justify-center mb-6">
-                            <i class="fas fa-envelope text-white text-2xl"></i>
+                    <!-- Contact Card 3: Email & Hours -->
+                    <div class="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-500 hover:-translate-y-2">
+                        <div class="h-48 bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center relative overflow-hidden">
+                            <svg class="w-24 h-24 text-green-500 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/>
+                            </svg>
+                            <div class="absolute top-4 right-4 w-8 h-8 bg-green-200 rounded-full opacity-50 animate-pulse"></div>
+                            <div class="absolute bottom-4 left-4 w-6 h-6 bg-green-300 rounded-full opacity-40 animate-pulse delay-300"></div>
                         </div>
-                        <h3 class="text-xl font-semibold text-primary mb-3">E-posta & Çalışma Saatleri</h3>
-                        <p class="text-secondary-600 mb-2">E-posta: <a href="mailto:info@ttsbilisim.com" class="text-primary hover:underline">info@ttsbilisim.com</a></p>
-                        <p class="text-secondary-600 mb-2">Pazartesi - Cumartesi: 09:00 - 19:00</p>
-                        <p class="text-secondary-600">Pazar: Kapalı</p>
+                        <div class="p-8 text-center">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors">
+                                E-posta & Çalışma Saatleri
+                            </h3>
+                            <div class="space-y-3 text-gray-600">
+                                <div>
+                                    <p class="font-medium text-gray-800">E-posta</p>
+                                    <a href="mailto:info@ttsbilisim.com" class="text-green-600 hover:text-green-700 font-semibold">info@ttsbilisim.com</a>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-800">Çalışma Saatleri</p>
+                                    <p>Pazartesi - Cumartesi</p>
+                                    <p class="font-semibold">09:00 - 19:00</p>
+                                </div>
+                                <div>
+                                    <p class="text-red-500 font-medium">Pazar: Kapalı</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Google Maps ve İletişim Formu -->
-        <section class="py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Google Maps & Contact Form Section -->
+        <section class="relative py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute inset-0">
+                <div class="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-full blur-3xl animate-pulse"></div>
+                <div class="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-purple-400/10 to-cyan-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            </div>
+            
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
                     <!-- Google Maps -->
-                    <div class="rounded-lg overflow-hidden shadow-md h-[500px]">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3012.088095865558!2d29.080603890702548!3d40.979551747342796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac7b6b9aec73f%3A0xfabad29babb99d9d!2zU2FocmF5xLEgQ2VkaXQsIFNpbmFuIFNva2HEn8SxIE5vOjEsIDM0NzM0IEthZMSxa8O2eS_EsHN0YW5idWw!5e0!3m2!1str!2str!4v1748375602677!5m2!1str!2str" class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="relative">
+                        <div class="bg-white/70 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden border border-white/50">
+                            <div class="p-6 border-b border-gray-100">
+                                <h3 class="text-2xl font-bold bg-gradient-to-r from-gray-900 to-blue-600 bg-clip-text text-transparent">
+                                    Konumumuz
+                                </h3>
+                                <p class="text-gray-600 mt-2">Kadıköy'de merkezi konumumuz</p>
+                            </div>
+                            <div class="h-[500px]">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3012.088095865558!2d29.080603890702548!3d40.979551747342796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac7b6b9aec73f%3A0xfabad29babb99d9d!2zU2FocmF5xLEgQ2VkaXQsIFNpbmFuIFNva2HEn8SxIE5vOjEsIDM0NzM0IEthZMSxa8O2eS_EsHN0YW5idWw!5e0!3m2!1str!2str!4v1748375602677!5m2!1str!2str" class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                        </div>
                     </div>
                     
-                    <!-- İletişim Formu -->
-                    <div class="bg-white rounded-lg shadow-md p-8">
-                        <h2 class="text-2xl font-bold text-primary mb-6">Bize Mesaj Gönderin</h2>
-                        <form>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                                <div>
-                                    <label for="name" class="block text-sm font-medium text-secondary-700 mb-1">Adınız Soyadınız *</label>
-                                    <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                    <!-- Contact Form -->
+                    <div class="relative">
+                        <div class="bg-white/70 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/50 overflow-hidden">
+                            <div class="p-8">
+                                <div class="mb-8">
+                                    <h2 class="text-3xl font-bold bg-gradient-to-r from-gray-900 to-purple-600 bg-clip-text text-transparent mb-4">
+                                        Bize Mesaj Gönderin
+                                    </h2>
+                                    <p class="text-gray-600">
+                                        Sorularınız için formu doldurun, en kısa sürede size dönüş yapalım
+                                    </p>
                                 </div>
-                                <div>
-                                    <label for="email" class="block text-sm font-medium text-secondary-700 mb-1">E-posta Adresiniz *</label>
-                                    <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-                                </div>
+                                
+                                <form class="space-y-6">
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <div class="space-y-2">
+                                            <label for="name" class="block text-sm font-semibold text-gray-700">Adınız Soyadınız *</label>
+                                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-white/50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 backdrop-blur-sm">
+                                        </div>
+                                        <div class="space-y-2">
+                                            <label for="email" class="block text-sm font-semibold text-gray-700">E-posta Adresiniz *</label>
+                                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-white/50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 backdrop-blur-sm">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="space-y-2">
+                                        <label for="phone" class="block text-sm font-semibold text-gray-700">Telefon Numaranız</label>
+                                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 bg-white/50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 backdrop-blur-sm">
+                                    </div>
+                                    
+                                    <div class="space-y-2">
+                                        <label for="subject" class="block text-sm font-semibold text-gray-700">Konu *</label>
+                                        <div class="relative">
+                                            <select id="subject" name="subject" required class="w-full px-4 py-3 pr-10 bg-white/50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 backdrop-blur-sm appearance-none cursor-pointer hover:bg-white/70 hover:border-gray-300">
+                                                <option value="" disabled selected>Konu Seçiniz</option>
+                                                <option value="teknik-servis">Teknik Servis</option>
+                                                <option value="yedek-parca">Yedek Parça</option>
+                                                <option value="fiyat-teklifi">Fiyat Teklifi</option>
+                                                <option value="randevu">Randevu Alma</option>
+                                                <option value="diger">Diğer</option>
+                                            </select>
+                                            <!-- Custom dropdown arrow -->
+                                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="space-y-2">
+                                        <label for="message" class="block text-sm font-semibold text-gray-700">Mesajınız *</label>
+                                        <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 bg-white/50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 backdrop-blur-sm resize-none"></textarea>
+                                    </div>
+                                    
+                                    <div class="flex items-start space-x-3">
+                                        <input type="checkbox" id="privacy" name="privacy" required class="mt-1 w-4 h-4 text-blue-600 bg-white border-gray-300 rounded focus:ring-blue-500">
+                                        <label for="privacy" class="text-sm text-gray-600">
+                                            <a href="#" class="text-blue-600 hover:text-blue-700 font-medium underline">Gizlilik Politikamızı</a> okudum ve kabul ediyorum.
+                                        </label>
+                                    </div>
+                                    
+                                    <button type="submit" class="w-full group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105 flex items-center justify-center">
+                                        <span class="relative z-10">Mesajı Gönder</span>
+                                        <i class="fas fa-paper-plane ml-3 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    </button>
+                                </form>
                             </div>
-                            
-                            <div class="mb-6">
-                                <label for="phone" class="block text-sm font-medium text-secondary-700 mb-1">Telefon Numaranız</label>
-                                <input type="tel" id="phone" name="phone" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-                            </div>
-                            
-                            <div class="mb-6">
-                                <label for="subject" class="block text-sm font-medium text-secondary-700 mb-1">Konu *</label>
-                                <select id="subject" name="subject" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-                                    <option value="" disabled selected>Konu Seçiniz</option>
-                                    <option value="teknik-servis">Teknik Servis</option>
-                                    <option value="yedek-parca">Yedek Parça</option>
-                                    <option value="fiyat-teklifi">Fiyat Teklifi</option>
-                                    <option value="randevu">Randevu Alma</option>
-                                    <option value="diger">Diğer</option>
-                                </select>
-                            </div>
-                            
-                            <div class="mb-6">
-                                <label for="message" class="block text-sm font-medium text-secondary-700 mb-1">Mesajınız *</label>
-                                <textarea id="message" name="message" rows="5" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
-                            </div>
-                            
-                            <div class="mb-6 flex items-center">
-                                <input type="checkbox" id="privacy" name="privacy" required class="mr-2">
-                                <label for="privacy" class="text-sm text-secondary-600">
-                                    <a href="#" class="text-primary hover:underline">Gizlilik Politikamızı</a> okudum ve kabul ediyorum.
-                                </label>
-                            </div>
-                            
-                            <button type="submit" class="w-full bg-primary hover:bg-primary-700 text-white font-medium py-3 px-4 rounded-md transition-colors">
-                                Mesajı Gönder
-                            </button>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- SSS -->
-        <section class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="max-w-3xl mx-auto">
-                    <div class="text-center mb-12">
-                        <h2 class="text-3xl font-bold text-primary mb-4">Sıkça Sorulan Sorular</h2>
-                        <p class="text-lg text-secondary-600">İletişim konusunda sık sorulan sorulara yanıtlarımız</p>
+        <!-- FAQ Section -->
+        <section class="relative py-24 bg-gradient-to-br from-slate-900 via-gray-900 to-black overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute inset-0">
+                <div class="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+                <div class="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+                
+                <!-- Grid Pattern -->
+                <div class="absolute inset-0 opacity-5">
+                    <div class="grid grid-cols-12 h-full">
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                        <div class="border-r border-white/10"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative z-10 container mx-auto px-4">
+                <!-- Section Header -->
+                <div class="text-center mb-20">
+                    <div class="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-6">
+                        <span class="w-2 h-2 bg-blue-400 rounded-full mr-3 animate-pulse"></span>
+                        <span class="text-sm font-medium text-gray-300">Sıkça Sorulan Sorular</span>
                     </div>
                     
-                    <div class="space-y-6">
-                        <div class="bg-gray-50 rounded-lg p-6">
-                            <h3 class="text-xl font-semibold text-primary mb-2">Nasıl randevu alabilirim?</h3>
-                            <p class="text-secondary-600">Randevu almak için yukarıdaki iletişim numaralarımızdan bizi arayabilir, WhatsApp üzerinden mesaj gönderebilir veya iletişim formumuzu doldurabilirsiniz. Size en kısa sürede dönüş yapacağız.</p>
-                        </div>
-                        
-                        <div class="bg-gray-50 rounded-lg p-6">
-                            <h3 class="text-xl font-semibold text-primary mb-2">Cihazımı size nasıl getirebilirim?</h3>
-                            <p class="text-secondary-600">Kadıköy'deki mağazamıza bizzat gelerek cihazınızı teslim edebilirsiniz. İsterseniz, İstanbul içi kurye hizmetimizden de faydalanabilirsiniz. Detaylı bilgi için lütfen bizi arayın.</p>
-                        </div>
-                        
-                        <div class="bg-gray-50 rounded-lg p-6">
-                            <h3 class="text-xl font-semibold text-primary mb-2">Hangi ödeme yöntemlerini kabul ediyorsunuz?</h3>
-                            <p class="text-secondary-600">Nakit, kredi kartı, banka havalesi ve mobil ödeme yöntemlerini kabul ediyoruz. Kredi kartına taksit imkanımız da bulunmaktadır.</p>
-                        </div>
-                        
-                        <div class="bg-gray-50 rounded-lg p-6">
-                            <h3 class="text-xl font-semibold text-primary mb-2">Tamir sonrası garanti var mı?</h3>
-                            <p class="text-secondary-600">Evet, tüm tamir işlemlerimiz için 6 ay garanti veriyoruz. Garanti süresi içinde yaşanan sorunlarda ücretsiz tekrar bakım ve onarım hizmeti sunuyoruz.</p>
-                        </div>
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+                        <span class="bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent">
+                            Merak Ettikleriniz
+                        </span>
+                    </h2>
+                    
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                        İletişim konusunda 
+                        <span class="text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text font-semibold">sık sorulan sorulara</span> 
+                        yanıtlarımız
+                    </p>
+                </div>
+                
+                <!-- FAQ Items -->
+                <div class="max-w-4xl mx-auto space-y-6">
+                    <div class="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                            <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-calendar-alt text-white text-sm"></i>
+                            </div>
+                            Nasıl randevu alabilirim?
+                        </h3>
+                        <p class="text-gray-300 leading-relaxed pl-12">
+                            Randevu almak için yukarıdaki iletişim numaralarımızdan bizi arayabilir, WhatsApp üzerinden mesaj gönderebilir veya iletişim formumuzu doldurabilirsiniz. Size en kısa sürede dönüş yapacağız.
+                        </p>
+                    </div>
+                    
+                    <div class="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                            <div class="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-white text-sm"></i>
+                            </div>
+                            Cihazımı size nasıl getirebilirim?
+                        </h3>
+                        <p class="text-gray-300 leading-relaxed pl-12">
+                            Kadıköy'deki mağazamıza bizzat gelerek cihazınızı teslim edebilirsiniz. İsterseniz, İstanbul içi kurye hizmetimizden de faydalanabilirsiniz. Detaylı bilgi için lütfen bizi arayın.
+                        </p>
+                    </div>
+                    
+                    <div class="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                            <div class="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-credit-card text-white text-sm"></i>
+                            </div>
+                            Hangi ödeme yöntemlerini kabul ediyorsunuz?
+                        </h3>
+                        <p class="text-gray-300 leading-relaxed pl-12">
+                            Nakit, kredi kartı, banka havalesi ve mobil ödeme yöntemlerini kabul ediyoruz. Kredi kartına taksit imkanımız da bulunmaktadır.
+                        </p>
+                    </div>
+                    
+                    <div class="group bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300">
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                            <div class="w-8 h-8 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-shield-alt text-white text-sm"></i>
+                            </div>
+                            Tamir sonrası garanti var mı?
+                        </h3>
+                        <p class="text-gray-300 leading-relaxed pl-12">
+                            Evet, tüm tamir işlemlerimiz için 6 ay garanti veriyoruz. Garanti süresi içinde yaşanan sorunlarda ücretsiz tekrar bakım ve onarım hizmeti sunuyoruz.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Çağrı Merkezi -->
-        <section class="py-16 bg-primary">
-            <div class="container mx-auto px-4">
-                <div class="flex flex-col md:flex-row items-center justify-center text-center md:text-left">
-                    <div class="mb-6 md:mb-0 md:mr-8">
-                        <h2 class="text-3xl font-bold text-white mb-2">7/24 Teknik Destek</h2>
-                        <p class="text-white text-opacity-90">Acil sorunlarınız için telefon desteğimiz her zaman yanınızda.</p>
+        <!-- Emergency Contact CTA -->
+        <section class="relative py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute inset-0">
+                <div class="absolute top-10 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
+                <div class="absolute bottom-10 right-10 w-80 h-80 bg-cyan-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+                
+                <!-- Floating shapes -->
+                <div class="absolute top-20 right-32 w-8 h-8 bg-white/20 rounded-full animate-pulse delay-500"></div>
+                <div class="absolute bottom-32 left-32 w-6 h-6 bg-cyan-400/30 rounded-full animate-pulse delay-700"></div>
+                <div class="absolute top-1/2 left-1/4 w-4 h-4 bg-white/15 rounded-full animate-pulse delay-300"></div>
+            </div>
+            
+            <div class="relative z-10 container mx-auto px-4">
+                <div class="flex flex-col lg:flex-row items-center justify-between">
+                    <!-- Content -->
+                    <div class="mb-8 lg:mb-0 text-center lg:text-left max-w-2xl">
+                        <div class="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full mb-6">
+                            <span class="w-2 h-2 bg-cyan-400 rounded-full mr-3 animate-pulse"></span>
+                            <span class="text-sm font-medium text-white">7/24 Acil Destek</span>
+                        </div>
+                        
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+                            Acil durumlar için 
+                            <span class="bg-gradient-to-r from-cyan-200 to-white bg-clip-text text-transparent">her zaman hazırız</span>
+                        </h2>
+                        
+                        <p class="text-white/90 text-lg leading-relaxed">
+                            Kritik durumlarda telefon desteğimiz her zaman yanınızda. 
+                            <span class="font-semibold">Hızlı çözüm</span> garantisiyle size yardımcı oluyoruz.
+                        </p>
                     </div>
-                    <a href="tel:+902165551234" class="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-md font-bold text-xl transition-colors inline-flex items-center">
-                        <i class="fas fa-phone-alt mr-3"></i> 0544 924 71 72 – 0216 302 10 10
-                    </a>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col gap-4 shrink-0">
+                        <a href="tel:+905449247172" class="group relative px-8 py-4 bg-white text-blue-600 rounded-2xl font-bold text-xl shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105 flex items-center justify-center">
+                            <i class="fas fa-phone-alt mr-3 group-hover:rotate-12 transition-transform duration-300"></i>
+                            <span class="relative z-10">Acil Arama</span>
+                            
+                            <!-- Button hover effect -->
+                            <div class="absolute inset-0 bg-gradient-to-r from-cyan-50 to-blue-50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                        
+                        <a href="https://wa.me/905449247172" target="_blank" class="group relative px-8 py-4 bg-green-500 text-white rounded-2xl font-bold text-xl shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:scale-105 flex items-center justify-center">
+                            <i class="fab fa-whatsapp mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                            <span>WhatsApp Mesaj</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Bottom Stats -->
+                <div class="mt-16 pt-8 border-t border-white/20">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+                        <div class="flex items-center justify-center space-x-3">
+                            <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                                <i class="fas fa-clock text-white text-lg"></i>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-white font-semibold">7/24 Destek</div>
+                                <div class="text-white/70 text-sm">Kesintisiz hizmet</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-center space-x-3">
+                            <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                                <i class="fas fa-bolt text-white text-lg"></i>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-white font-semibold">Hızlı Yanıt</div>
+                                <div class="text-white/70 text-sm">5 dakika içinde</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-center space-x-3">
+                            <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                                <i class="fas fa-headset text-white text-lg"></i>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-white font-semibold">Uzman Destek</div>
+                                <div class="text-white/70 text-sm">Deneyimli ekip</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-secondary-800 text-white pt-12 mt-auto">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-                <!-- Firma Bilgileri -->
-                <div>
-                    <h3 class="text-xl font-semibold mb-4 flex items-center">
-                        <span class="text-primary-300 text-2xl mr-2">TTS</span> Bilişim
-                    </h3>
-                    <p class="text-gray-300 mb-4">Profesyonel bilgisayar, telefon ve tablet teknik servis hizmetleri.</p>
-                    <div class="flex space-x-4">
-                        <a href="https://facebook.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://twitter.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://instagram.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" class="text-gray-300 hover:text-primary-300 transition-colors">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
+    <footer class="relative bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-20 w-64 h-64 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-full blur-3xl"></div>
+            
+            <!-- Tech pattern overlay -->
+            <div class="absolute inset-0 opacity-5">
+                <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="techPattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+                            <circle cx="30" cy="30" r="2" fill="currentColor"/>
+                            <path d="M30 10v20m-20 0h20m20 0v20m0-20h-20" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#techPattern)"/>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Main Footer Content -->
+            <div class="pt-16 pb-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                    <!-- Company Info -->
+                    <div class="lg:col-span-1">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-4 flex items-center">
+                                <span class="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent text-3xl mr-3">TTS</span> 
+                                <span class="text-white">Bilişim</span>
+                            </h3>
+                            <p class="text-gray-300 mb-6 leading-relaxed">
+                                Profesyonel bilgisayar, telefon ve tablet teknik servis hizmetleri. 
+                                <span class="text-blue-400 font-semibold">En kaliteli</span> orijinal yedek parçalar.
+                            </p>
+                        </div>
+                        
+                        <!-- Social Media -->
+                        <div class="flex space-x-4">
+                            <a href="https://facebook.com" target="_blank" class="group w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                <i class="fab fa-facebook-f text-white group-hover:text-blue-200"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="group w-10 h-10 bg-gradient-to-r from-cyan-600 to-cyan-700 rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                <i class="fab fa-twitter text-white group-hover:text-cyan-200"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="group w-10 h-10 bg-gradient-to-r from-pink-600 to-rose-700 rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                <i class="fab fa-instagram text-white group-hover:text-pink-200"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="group w-10 h-10 bg-gradient-to-r from-blue-700 to-indigo-700 rounded-lg flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                <i class="fab fa-linkedin-in text-white group-hover:text-blue-200"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                
-                <!-- Hızlı Bağlantılar -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-gray-100">Hızlı Bağlantılar</h4>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-300 hover:text-primary-300 transition-colors">Ana Sayfa</a></li>
-                        <li><a href="hakkimizda.html" class="text-gray-300 hover:text-primary-300 transition-colors">Hakkımızda</a></li>
-                        <li><a href="hizmetlerimiz.html" class="text-gray-300 hover:text-primary-300 transition-colors">Hizmetlerimiz</a></li>
-                        <li><a href="yedek-parca.html" class="text-gray-300 hover:text-primary-300 transition-colors">Orijinal Yedek Parça</a></li>
-                        <li><a href="blog.html" class="text-gray-300 hover:text-primary-300 transition-colors">Blog</a></li>
-                        <li><a href="iletisim.html" class="text-gray-300 hover:text-primary-300 transition-colors">İletişim</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Hizmetler -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-gray-100">Hizmetlerimiz</h4>
-                    <ul class="space-y-2">
-                        <li><a href="hizmetlerimiz.html#bilgisayar" class="text-gray-300 hover:text-primary-300 transition-colors">Bilgisayar Tamiri</a></li>
-                        <li><a href="hizmetlerimiz.html#telefon" class="text-gray-300 hover:text-primary-300 transition-colors">Telefon Tamiri</a></li>
-                        <li><a href="hizmetlerimiz.html#tablet" class="text-gray-300 hover:text-primary-300 transition-colors">Tablet Tamiri</a></li>
-                        <li><a href="hizmetlerimiz.html#anakart" class="text-gray-300 hover:text-primary-300 transition-colors">Anakart Tamiri</a></li>
-                        <li><a href="hizmetlerimiz.html#veri-kurtarma" class="text-gray-300 hover:text-primary-300 transition-colors">Veri Kurtarma</a></li>
-                        <li><a href="yedek-parca.html" class="text-gray-300 hover:text-primary-300 transition-colors">Orijinal Yedek Parça</a></li>
-                    </ul>
-                </div>
-                
-                <!-- İletişim Bilgileri -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-gray-100">İletişim</h4>
-                    <ul class="space-y-3 text-gray-300">
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary-300"></i>
-                            <span>Sahrayıcedit mh. İnönü cd. Sinan sk. No:1a<br>Kadıköy, İstanbul</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-phone-alt mr-3 text-primary-300"></i>
-                            <span><a href="tel:+902165551234" class="hover:text-primary-300 transition-colors">0544 924 71 72 – 0216 302 10 10</a></span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope mr-3 text-primary-300"></i>
-                            <span><a href="mailto:info@ttsbilisim.com" class="hover:text-primary-300 transition-colors">info@ttsbilisim.com</a></span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-clock mr-3 text-primary-300"></i>
-                            <span>Pzt - Cmt: 09:00 - 19:00</span>
-                        </li>
-                    </ul>
+                    
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-6 text-white relative">
+                            Hızlı Bağlantılar
+                            <div class="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></div>
+                        </h4>
+                        <ul class="space-y-3">
+                            <li><a href="index.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Ana Sayfa
+                            </a></li>
+                            <li><a href="hakkimizda.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Hakkımızda
+                            </a></li>
+                            <li><a href="hizmetlerimiz.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Hizmetlerimiz
+                            </a></li>
+                            <li><a href="yedek-parca.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Orijinal Yedek Parça
+                            </a></li>
+                            <li><a href="blog.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Blog
+                            </a></li>
+                            <li><a href="iletisim.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                İletişim
+                            </a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Services -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-6 text-white relative">
+                            Hizmetlerimiz
+                            <div class="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full"></div>
+                        </h4>
+                        <ul class="space-y-3">
+                            <li><a href="hizmetlerimiz.html#bilgisayar" class="text-gray-300 hover:text-purple-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Bilgisayar Tamiri
+                            </a></li>
+                            <li><a href="hizmetlerimiz.html#telefon" class="text-gray-300 hover:text-purple-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Telefon Tamiri
+                            </a></li>
+                            <li><a href="hizmetlerimiz.html#tablet" class="text-gray-300 hover:text-purple-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Tablet Tamiri
+                            </a></li>
+                            <li><a href="hizmetlerimiz.html#anakart" class="text-gray-300 hover:text-purple-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Anakart Tamiri
+                            </a></li>
+                            <li><a href="hizmetlerimiz.html#veri-kurtarma" class="text-gray-300 hover:text-purple-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Veri Kurtarma
+                            </a></li>
+                            <li><a href="yedek-parca.html" class="text-gray-300 hover:text-purple-400 transition-colors duration-300 flex items-center group">
+                                <i class="fas fa-chevron-right text-xs mr-2 group-hover:translate-x-1 transition-transform duration-300"></i>
+                                Orijinal Yedek Parça
+                            </a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-6 text-white relative">
+                            İletişim Bilgileri
+                            <div class="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-green-500 to-cyan-600 rounded-full"></div>
+                        </h4>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start group">
+                                <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-white text-sm"></i>
+                                </div>
+                                <span class="group-hover:text-blue-400 transition-colors duration-300">
+                                    Sahrayıcedit mh. İnönü cd. Sinan sk. No:1a<br>Kadıköy, İstanbul
+                                </span>
+                            </li>
+                            <li class="flex items-center group">
+                                <div class="w-8 h-8 bg-gradient-to-r from-green-500 to-cyan-600 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-phone-alt text-white text-sm"></i>
+                                </div>
+                                <div class="space-y-1">
+                                    <div><a href="tel:+905449247172" class="hover:text-green-400 transition-colors duration-300">0544 924 71 72</a></div>
+                                    <div><a href="tel:+902163021010" class="hover:text-green-400 transition-colors duration-300">0216 302 10 10</a></div>
+                                </div>
+                            </li>
+                            <li class="flex items-center group">
+                                <div class="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-envelope text-white text-sm"></i>
+                                </div>
+                                <span><a href="mailto:info@ttsbilisim.com" class="hover:text-purple-400 transition-colors duration-300">info@ttsbilisim.com</a></span>
+                            </li>
+                            <li class="flex items-center group">
+                                <div class="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-clock text-white text-sm"></i>
+                                </div>
+                                <span class="group-hover:text-orange-400 transition-colors duration-300">Pzt - Cmt: 09:00 - 19:00</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             
-            <div class="border-t border-gray-700 py-6">
+            <!-- Google Maps -->
+            <div class="mb-12">
+                <div class="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm border border-white/10 rounded-2xl p-2">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3012.088095865558!2d29.080603890702548!3d40.979551747342796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac7b6b9aec73f%3A0xfabad29babb99d9d!2zU2FocmF5xLEgQ2VkaXQsIFNpbmFuIFNva2HEn8SxIE5vOjEsIDM0NzM0IEthZMSxa8O2eS_EsHN0YW5idWw!5e0!3m2!1str!2str!4v1748375602677!5m2!1str!2str" class="w-full h-64 rounded-2xl shadow-2xl" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-700/50 py-8">
                 <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-400 mb-4 md:mb-0">© 2025 TTS Bilişim. Tüm hakları saklıdır.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-primary-300 transition-colors">Gizlilik Politikası</a>
-                        <a href="#" class="text-gray-400 hover:text-primary-300 transition-colors">Kullanım Koşulları</a>
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-gray-400 flex items-center">
+                            <span class="mr-2">© 2025</span>
+                            <span class="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent font-semibold">TTS Bilişim</span>
+                            <span class="ml-2">. Tüm hakları saklıdır.</span>
+                        </p>
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm">Gizlilik Politikası</a>
+                        <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm">Kullanım Koşulları</a>
                     </div>
                 </div>
             </div>
@@ -369,9 +902,11 @@
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
     </script>
 </body>
 </html>
